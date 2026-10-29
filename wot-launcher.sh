@@ -73,6 +73,13 @@ set_mouse_profile() {
     done
 
     log "Error: G502 unavailable for profile $profile after $MOUSE_RETRIES attempts." "$ERR_LOG"
+    if ! ratbagctl list 2>/dev/null | grep -q "$G502_MATCH"; then
+        # ratbagd can only see a mouse through its hidraw node. When none is
+        # listed, the usual cause is a stale Wine process holding deleted
+        # /dev/hidraw nodes open: the kernel has 64 hidraw slots, and each
+        # re-enumeration of the mouse leaks one until they run out.
+        echo "Hint: ratbagctl does not list the G502. If it lists no devices at all, check for stale Wine processes holding deleted /dev/hidraw nodes (ls -l /proc/[0-9]*/fd 2>/dev/null | grep 'hidraw.*deleted'); killing them and re-plugging the receiver restores the hidraw nodes." >&2
+    fi
     return 1
 }
 
@@ -247,6 +254,8 @@ Usage: $(basename "$0") [options]
                     launching the game. PATH may be a host path or a Windows
                     path; it defaults to the newest Aslains installer in
                     ~/Downloads
+  --wcg             open Wargaming Game Center (for game updates) and exit,
+                    without launching the game
   -h, --help        show this help
 EOF
 }
@@ -257,6 +266,7 @@ FIX_RES=0
 RESET_MOUSE_ONLY=0
 INSTALL_MOD=0
 INSTALL_MOD_PATH=""
+WCG_ONLY=0
 MOUSE_PROFILE_ARG=""
 
 while [ $# -gt 0 ]; do
@@ -264,6 +274,7 @@ while [ $# -gt 0 ]; do
         --fixres)      FIX_RES=1; shift ;;
         --no-fixres)   FIX_RES=0; shift ;;
         --reset-mouse) RESET_MOUSE_ONLY=1; shift ;;
+        --wcg)         WCG_ONLY=1; shift ;;
         --install-mod)
             INSTALL_MOD=1
             # Optional path: consume the next argument only if it is not
@@ -356,6 +367,13 @@ if [ "$INSTALL_MOD" -eq 1 ]; then
     echo "Running modpack installer: $win_path"
     echo "Close the installer window when it has finished."
     flatpak run --command=bottles-cli com.usebottles.bottles run -b "$BOTTLE" -e "$win_path"
+    exit $?
+fi
+
+# Game Center handles game patches, so it is opened on its own and returns
+# before the mouse switch, like the modpack update above.
+if [ "$WCG_ONLY" -eq 1 ]; then
+    flatpak run --command=bottles-cli com.usebottles.bottles run -b "$BOTTLE" -p "wgc"
     exit $?
 fi
 
