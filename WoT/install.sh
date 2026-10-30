@@ -1,5 +1,5 @@
 #!/bin/bash
-# Install wot-launcher.sh and reset-mouse-profile.sh into ~/.local/bin.
+# Install the WoT UMU launcher and mouse-profile helper into ~/.local/bin.
 #
 # Safe to re-run: files that already match are left alone.
 
@@ -7,7 +7,7 @@ set -euo pipefail
 
 SRC_DIR="$(cd "$(dirname "$0")" && pwd)"
 DEST_DIR="$HOME/.local/bin"
-SCRIPTS=(wot-launcher.sh reset-mouse-profile.sh)
+SCRIPTS=(wot-launcher.sh g502-profile.sh)
 
 mkdir -p "$DEST_DIR"
 
