@@ -1,0 +1,1466 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<profile version="16" start_mode="MM_SCM" default_mode="Default" restore_last="False" force_numlock="True" force_numlock_on="False">
+  <modes>
+    <mode name="Default"/>
+    <mode name="b3b159a04d064bd693f97583ec08b877"/>
+    <mode name="MM_SCM"/>
+    <mode name="MM_NAV" inherit="MM_SCM"/>
+    <mode name="MM_NAV_Quantum" inherit="MM_NAV"/>
+    <mode name="MM_NAV_Flight" inherit="MM_NAV"/>
+    <mode name="OM_Aux" inherit="MM_SCM"/>
+    <mode name="OM_Scan" inherit="MM_SCM"/>
+    <mode name="Modifier" inherit="MM_SCM"/>
+    <mode name="MM_SCM_Guns" inherit="MM_SCM"/>
+    <mode name="MM_SCM_Flight" inherit="MM_SCM"/>
+    <mode name="MM_SCM_Missiles" inherit="MM_SCM"/>
+  </modes>
+  <removed-devices>
+    <device id="1b56ecf706244049b7b38d9b7d8ed7e0"/>
+    <device id="ccb486e8808e4b3fabe7bcb380f39aa4"/>
+    <device id="e04aaf5348384763bc60d5c7f8e653a1"/>
+    <device id="dbce0add460c480f991231f905a84247"/>
+    <device id="72bbc0f431a84a41b528868dc7fcedfa"/>
+  </removed-devices>
+  <devices>
+    <device name=" VKBsim Gladiator NXT R  " label="" device-guid="6c422e005ce711ec8001444553540000" type="joystick">
+      <mode name="MM_SCM">
+        <axis id="1" description="Yaw">
+          <container type="basic" container_id="bbf232540686479ba5d65b780581dda8" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" axis="1" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="1" action_id="d6c72491f9264dfe9697f1ed355e5358" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="c6e66e040e594fec8c4dc67ac8898986"/>
+          </container>
+        </axis>
+        <axis id="2" description="Pitch">
+          <container type="basic" container_id="31055ec103eb4ca995d4d7561848d2d0" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" axis="2" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="2" action_id="84597d283aab49edbff18f03ae040954" priority="9">
+                <curve-data mode="none" centered="False" id="613ad2c71cfb440da82906d25256c420">
+                  <mapping type="cubic-spline">
+                    <control-point x="-1.00000" y="1.00000"/>
+                    <control-point x="1.00000" y="-1.00000"/>
+                  </mapping>
+                  <deadzone low="-1.00000" center-low="0.00000" center-high="0.00000" high="1.00000"/>
+                </curve-data>
+              </vjoyremap>
+            </action-set>
+            <activation-condition rule="all" condition_id="732d43797f074857b572635e493f629d"/>
+          </container>
+        </axis>
+        <axis id="3" description="Weapons Convergence">
+          <container type="basic" container_id="f5be375fc0854b85a880f96c4185e54e" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" axis="3" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="3" action_id="ca60f8e221074fccb9c6a2713f01aa8b" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="384002d1fca443f4bbece3d646c4347e"/>
+          </container>
+        </axis>
+        <axis id="4" description="Freelook">
+          <container type="basic" container_id="c557315739fb4eaa8f926029a25f8bd0" collapsed="False">
+            <action-set>
+              <response-curve-ex mode="none" centered="False" id="dab8da1970e34c1db42ad8d41bfb247a" action_id="bb7e6f3940e64e01a99c034139f4c8f9" priority="1">
+                <mapping type="cubic-bezier-spline">
+                  <control-point x="-1.00000" y="-1.00000"/>
+                  <control-point x="0.00400" y="-1.00000"/>
+                  <control-point x="-0.05000" y="0.00000"/>
+                  <control-point x="0.00000" y="0.00000"/>
+                  <control-point x="0.05000" y="0.00000"/>
+                  <control-point x="-0.00800" y="1.00000"/>
+                  <control-point x="1.00000" y="1.00000"/>
+                </mapping>
+                <deadzone low="-1.00000" center-low="0.00000" center-high="0.00000" high="1.00000"/>
+              </response-curve-ex>
+              <map-to-mouse motion-input="True" button-id="1" direction="90" min-speed="0" max-speed="3000" time-to-max-speed="1.00000000" action_id="3c776b428747451fa6fdd600ff19b01a" priority="5"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="975904d5cfbf48419f632b03168d9365"/>
+          </container>
+        </axis>
+        <axis id="5" description="Freelook">
+          <container type="basic" container_id="385f1d5db8c14753a3c7b9663292c333" collapsed="False">
+            <action-set>
+              <response-curve-ex mode="none" centered="False" id="1059d46a56c2456a88215c88509f1483" action_id="f14a1064fca84c42b48e9b85f31d7698" priority="1">
+                <mapping type="cubic-bezier-spline">
+                  <control-point x="-1.00000" y="1.00000"/>
+                  <control-point x="-0.00400" y="1.00000"/>
+                  <control-point x="-0.05000" y="-0.00000"/>
+                  <control-point x="0.00000" y="0.00000"/>
+                  <control-point x="0.05000" y="-0.00000"/>
+                  <control-point x="0.00400" y="-1.00000"/>
+                  <control-point x="1.00000" y="-1.00000"/>
+                </mapping>
+                <deadzone low="-1.00000" center-low="0.00000" center-high="0.00000" high="1.00000"/>
+              </response-curve-ex>
+              <map-to-mouse motion-input="True" button-id="1" direction="0" min-speed="0" max-speed="3000" time-to-max-speed="1.00000000" action_id="9d58a37e3cbb48be8bc893c6fe7730a0" priority="5"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="cc1d39d0782d4eda876f9fdb145d40ae"/>
+          </container>
+        </axis>
+        <axis id="6" description="Roll">
+          <container type="basic" container_id="0206e99c11d14cae8311d31a1b36d677" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" axis="6" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="6" action_id="abfde141d2c84ea6b32fc0c0e43b4040" priority="9">
+                <curve-data mode="none" centered="False" id="3975eff20b584875b15cbcc679d35c12">
+                  <mapping type="cubic-spline">
+                    <control-point x="-1.00000" y="1.00000"/>
+                    <control-point x="1.00000" y="-1.00000"/>
+                  </mapping>
+                  <deadzone low="-1.00000" center-low="0.00000" center-high="0.00000" high="1.00000"/>
+                </curve-data>
+              </vjoyremap>
+            </action-set>
+            <activation-condition rule="all" condition_id="087613f75fcb42bf81273cc98252a24f"/>
+          </container>
+        </axis>
+        <button id="1" description="Trigger">
+          <container type="basic" container_id="7f09cd3664d54e7785c88633f33b4e18" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="1" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="1" action_id="29d805e249d0414b855cd5e7d81e4de9" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="644e7c8725ff43ba87794f98596e37c1"/>
+          </container>
+        </button>
+        <button id="10">
+          <container type="basic" container_id="5730317763594afdbf80577c85f102ed" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="15" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="15" action_id="311e357bd0a643d3894f590827cd871e" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="5a9eeeb4ad0649feb4e3ea1b6f245950"/>
+          </container>
+        </button>
+        <button id="11">
+          <container type="basic" container_id="a29b1632b92a40938334bf8a661f855b" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="6" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="6" action_id="395464bae4a1485e86725ec18f046fcc" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="03eeaad87a0749dea44bf862e93715ef"/>
+          </container>
+        </button>
+        <button id="12" description="Shields Increase">
+          <container type="basic" container_id="32005ce9de1645d4a0ee2ff97528fd2a" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="7" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="7" action_id="f3fddc1340f1497fab3d6008f45f9f19" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="cf2f5362703c444d8fdc43cc37b675e3"/>
+          </container>
+        </button>
+        <button id="13" description="Thrusters Increase">
+          <container type="basic" container_id="b993189ab6274f658eccbacd5a9d5daf" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="8" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="8" action_id="8bebf83fd3534cf6b57b742946c4a356" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="cc024995518d4fa68157505cf4d3c61b"/>
+          </container>
+        </button>
+        <button id="14" description="Weapons Increase">
+          <container type="basic" container_id="d25960f9f71442aa88c4ce8859e38d44" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="9" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="9" action_id="7ca4c871005d45d6b85f5dc68d8629cd" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="fe28dcbcc5794f8fbba5200dbc81ba4f"/>
+          </container>
+        </button>
+        <button id="15" description="Capacitor Reset">
+          <container type="basic" container_id="2daa62be76f74ed5b5f326b3ec3b6eff" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="10" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="10" action_id="39ac7cdf698f432bac1c64a1fbaceed2" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="3a0797acd7a64efc917a39061c90c440"/>
+          </container>
+        </button>
+        <button id="16" description="Mining Module 1">
+          <container type="basic" container_id="ad10c3cd381342e191711943a53409fe" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="21" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="21" action_id="48dd87e30ad54b5dba0653a57185ba19" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="394c4b78ef414d2b8ba716575ba8a8bd"/>
+          </container>
+        </button>
+        <button id="17" description="Mining Module 2">
+          <container type="basic" container_id="4ea98a6179004fe7884f95a3bf4753b6" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="22" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="22" action_id="26dfab20cb014b938c01403df2aec93e" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="8dca81a04c0e48c9a9377d5ce520cf49"/>
+          </container>
+        </button>
+        <button id="18" description="Focus Disintegration">
+          <container type="basic" container_id="d820e83608a94b618b9756ee7bc651e1" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="23" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="23" action_id="43dffbc1f24a4babbb80ce1ee562c308" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="12ebe829e1eb4cfdaf242110090d9f1d"/>
+          </container>
+        </button>
+        <button id="19" description="Mining Module 3">
+          <container type="basic" container_id="0f1b3ebcdcad4e9bb126a5f11819a3c8" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="24" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="24" action_id="c9cc1b7196224190a5777f521366d55e" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="87abf0ba248642b5bdde1b44af859287"/>
+          </container>
+        </button>
+        <button id="2" description="Fire selected group">
+          <container type="basic" container_id="86841d711367424487c7831f78999505" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="2" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="2" action_id="7396aefd58ed4b45ace6483d362bbe76" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="4267991bc46949a18d5a1096d738fa3a"/>
+          </container>
+        </button>
+        <button id="20" description="Focus Salvage heads">
+          <container type="basic" container_id="ef4072abc07546dc86712144da22a162" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="25" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="25" action_id="8c476e7f84874d9cb478167251b36f22" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="314f7176ef6e43e0aed2e85c783471a3"/>
+          </container>
+        </button>
+        <button id="21" description="Decoy">
+          <container type="basic" container_id="d2f323b056eb47bdabe38397500b7bf5" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="26" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="26" action_id="6f11c5c20ba24246bd3bd2f5e24bce67" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="d14acca214b349418d13fcce8efda064"/>
+          </container>
+        </button>
+        <button id="22" description="Noise">
+          <container type="basic" container_id="15da4ff565764446978cd85a4080b104" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="27" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="27" action_id="250a4861d19f4197acd7cb60e08c7a63" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="1e11cc4ab7724f7f8b69aa27c4fdd6c3"/>
+          </container>
+        </button>
+        <button id="23" description="Decoy Burst +">
+          <container type="basic" container_id="751bd726992b413a9b5335f717b5ce56" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="28" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="28" action_id="63387f5e97d646278ee354c65cae19f3" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="7b6e4395cade4119ab18ca7a8ee16896"/>
+          </container>
+        </button>
+        <button id="24" description="Decoy Burst -">
+          <container type="basic" container_id="41609522972c4866837e71c075b82c25" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="29" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="29" action_id="fa1811c2ba4b403596db9e7bab360c97" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="a4bd3e4c862148039f6fa980ec7030c4"/>
+          </container>
+        </button>
+        <button id="25" description="Salvage Beam Spacing +">
+          <container type="basic" container_id="0cdd7dd91bd14e209340f3f5755bf8b2" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="19" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="19" action_id="641916b4553944338bcf9e228bab83cd" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="22d790df1fe047fea214025cddd47096"/>
+          </container>
+        </button>
+        <button id="26" description="Salvage Beam Spacing -">
+          <container type="basic" container_id="f6153f6d4c9549c998bea49c8c183ca9" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="20" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="20" action_id="88ac44ad1a5a4e67b60361c57345b9a0" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="9c1ddb83fb06434789aa8f27c000c16a"/>
+          </container>
+        </button>
+        <button id="27" description="Lights">
+          <container type="basic" container_id="93244ccd72954ad98ccb7169a7339d8f" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="16" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="16" action_id="96cb178f80c948fbaf5f0c955e4b6d6a" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="f4836654bafa46909af746d5b128272a"/>
+          </container>
+        </button>
+        <button id="28" description="Exit Seat">
+          <container type="basic" container_id="21296d772ed548d7b992e9bdb725b2b9" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="17" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="17" action_id="4ddcac869be34e8493cb5b6546dd1bb9" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="1ec3c455abce4a8f983c6e6c4a3b7296"/>
+          </container>
+        </button>
+        <button id="29" description="Port Lock">
+          <container type="basic" container_id="bc39b7b76fc9472a8d2d3fe963aa187c" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="18" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="18" action_id="d798477761274eadb42a29c0717935e2" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="b20368340c1943a2b4eca040c620e9d1"/>
+          </container>
+        </button>
+        <button id="3" description="Scanning/[H](Select Mining/Salvage Modes)">
+          <container type="tempo" delay="0.50000000" autorelease-delay="0.25000000" activate-on="press" container_id="ce8416863c0040cfa63bdc9955bd7a10" collapsed="False">
+            <action-set>
+              <switch-mode name="OM_Scan" exec-on-press="True" exec-on-release="False" action_id="f78620d820d44908b231229f1205d2f9" priority="9"/>
+            </action-set>
+            <action-set>
+              <switch-mode name="OM_Aux" exec-on-press="True" exec-on-release="False" action_id="a0464f853e314814a9787d2083e2efb9" priority="999"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="802a0e1e05d548b9a0cf3d17e8313c4a"/>
+          </container>
+        </button>
+        <button id="4" description="Decouple Toggle">
+          <container type="basic" container_id="9dfa3b5babff4b4baf90e41f44555de7" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="4" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="4" action_id="50587ac1c0a24074b84759f77b19bee1" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="1cd20b453c2d467e9a0f0af412f73c53"/>
+          </container>
+        </button>
+        <button id="5" description="[H]VOIP PTT">
+          <container type="basic" container_id="df3af3eef2194ba49010e68c27a03db5" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="5" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="5" action_id="a86ea35b8fb4477eb18eae6708c7e190" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="035811e02fbe4b6eb85b7e2325d2398f"/>
+          </container>
+        </button>
+        <button id="6" description="Mining Laser Power inc">
+          <container type="basic" container_id="d14fc0d75de741a78fbe2fe8eca783b1" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="11" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="11" action_id="c6641d15432b4a76bbafa10378137f4a" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="b0956b022814493da9532e4666d6a73c"/>
+          </container>
+        </button>
+        <button id="7" description="Targets">
+          <container type="basic" container_id="6ad08ba26c774b37b32756accc635c44" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="12" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="12" action_id="e6ba26d52b56453a9f11c442eebbca86" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="889e0f177e3a460d9507782741c0f926"/>
+          </container>
+        </button>
+        <button id="8" description="Mining Laser Power Dec">
+          <container type="basic" container_id="cd80c963c0d14911ab0991be9007c19e" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="13" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="13" action_id="b0c926d06cd24ed19c2d8f8d009a60f6" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="2f2f176cb99b4752a0750a1fdb5629fb"/>
+          </container>
+        </button>
+        <button id="9" description="Targets">
+          <container type="basic" container_id="4f932d089b054dce8d432e86f4e32021" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="14" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="14" action_id="954e98876dc34005a25ee42ac8034c08" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="d17034b70308499882a76c675a0a14f1"/>
+          </container>
+        </button>
+        <hat id="1">
+          <container type="basic" container_id="4b237b6dae2e413980412c41317f2154" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" hat="1" mode="VJoyHat" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="1" action_id="9382cce1512e4b208b08523c494d803f" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="05aaf95bc8454c2497d9f3f286d0ea82"/>
+          </container>
+        </hat>
+      </mode>
+      <mode name="Modifier" inherit="MM_SCM">
+        <button id="1">
+          <container type="basic" container_id="51a9c46482114ea7a84994a8a45324d0" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="31" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="31" action_id="be3391c769f640398701c764848a2454" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="b4746c69b8c6438d8085f32847027247"/>
+          </container>
+        </button>
+        <button id="10">
+          <container type="basic" container_id="207e132cb2534f908532402947b45db1" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="45" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="45" action_id="c2856132bc954a55a4b298024e789600" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="43306ffaa2634a7787edb0b9446bf7a6"/>
+          </container>
+        </button>
+        <button id="11">
+          <container type="basic" container_id="ac407dd55edf4c56b678ecbaea41c7c8" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="36" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="36" action_id="1c0c18007c9042c7be7aa4aaf390f49a" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="d47f378c7b7440839e251715263b4dd4"/>
+          </container>
+        </button>
+        <button id="12">
+          <container type="basic" container_id="e68a5eca00f346b2a2b367f947f803c6" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="37" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="37" action_id="41d6137245e54515aae0349e762f5614" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="b2e7d848c01a4c7280738fccba256630"/>
+          </container>
+        </button>
+        <button id="13">
+          <container type="basic" container_id="73a63dcfacc643e8b538e40cc916e647" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="38" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="38" action_id="858dded417f946ff9551b1e59ce9d104" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="bb99c202f43e4271a8265928bf076c00"/>
+          </container>
+        </button>
+        <button id="14">
+          <container type="basic" container_id="c9b7b850597347f6940449ca4f7211fd" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="39" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="39" action_id="2c2fcbebac14415a97ad06181be55f19" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="a3b505dc27734f16ac2f62fcbb5dba7d"/>
+          </container>
+        </button>
+        <button id="15">
+          <container type="basic" container_id="21008a92e0ed48ae8de31abba2394e7f" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="40" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="40" action_id="2bfd7e70f602438e8912ddae5e663c35" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="772c64011c2147d59d0d6cf4651431a1"/>
+          </container>
+        </button>
+        <button id="16">
+          <container type="basic" container_id="4d9a29dc92f642f5ad37cf773888319c" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="51" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="51" action_id="b8944bf9e48a4c5690f86696371159d8" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="00e1b22b901b452ca1f5c658233eec33"/>
+          </container>
+        </button>
+        <button id="17">
+          <container type="basic" container_id="d30d122aa22d45e28d05313887785566" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="52" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="52" action_id="b9bec1f406284d51ac2bc51cea000827" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="2fa11d5ce3c04e44ab2356f8e8773083"/>
+          </container>
+        </button>
+        <button id="18">
+          <container type="basic" container_id="ce153d0822a84c36a4a84b89ac3d3e7e" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="53" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="53" action_id="7931c35cc89c463faa04f1f34c2e8c06" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="98dd524b67b54606b16cb9aa924f1bb9"/>
+          </container>
+        </button>
+        <button id="19">
+          <container type="basic" container_id="0a63739ce23147e3a9ec1a20173b37f9" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="54" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="54" action_id="b7700b1982be4ab6b23cbbc859482afc" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="2958e1996aa34a4b8687a525940c36bf"/>
+          </container>
+        </button>
+        <button id="2">
+          <container type="basic" container_id="eb964183c00c4adaad9d0a5094df7e84" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="32" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="32" action_id="c351ddba6f0446779b83d928aecc072e" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="7a212b9cb65d40b3a51c5a8fa17250a0"/>
+          </container>
+        </button>
+        <button id="20">
+          <container type="basic" container_id="c4ee4040e0064a50a05d121a7e7fb878" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="55" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="55" action_id="9e97b09a9ad944e08d802f49b927ce03" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="51cd6d97feff447eb15fb10d88164fbd"/>
+          </container>
+        </button>
+        <button id="21">
+          <container type="basic" container_id="68c3fe578d9b439ab6d1d61278966c48" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="56" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="56" action_id="549bb553aa37446db2eb7b1df30ba4e2" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="110ee9af7e1446a98db7a90059f3676c"/>
+          </container>
+        </button>
+        <button id="22">
+          <container type="basic" container_id="2170cdd05bac47bcbbb9caf6f4258094" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="57" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="57" action_id="a2e27c3f6e1a4d60b29cc8ed6d9ce125" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="819c935fced249e0b799bc18a5a53354"/>
+          </container>
+        </button>
+        <button id="23">
+          <container type="basic" container_id="d158af2e113a4dadbc59e7a43325a980" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="58" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="58" action_id="1014685c4fe3412bb0a1c39cbb6456b0" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="3048c4a865804c6ba18ea7d07c5736b5"/>
+          </container>
+        </button>
+        <button id="24">
+          <container type="basic" container_id="fd6d466dd24b49d69b43e46c1db948fb" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="59" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="59" action_id="62dd72db0f8944f79f707c0e561c3fcb" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="2a5c9d50c55e48fb949b105f97474452"/>
+          </container>
+        </button>
+        <button id="25">
+          <container type="basic" container_id="246793a7405142649e70c396d5cea94a" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="49" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="49" action_id="18578ba115e246f680eaf9ee6b60ddf3" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="2ad48a7ecdfb44f884bdb574be8cadd4"/>
+          </container>
+        </button>
+        <button id="26">
+          <container type="basic" container_id="de743182d7da41b3adcc5ced029066b9" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="50" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="50" action_id="6c9452eebd4344ef8aa85fd08a6043ff" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="ef11413434504975901eaa3f1e44491d"/>
+          </container>
+        </button>
+        <button id="27">
+          <container type="basic" container_id="bfa6349e8b1947ea9360b262726e74e8" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="46" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="46" action_id="1d9f5e81ce4a49758fd70ecd95a78042" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="7fd87b5489654c608641c0544ed3036b"/>
+          </container>
+        </button>
+        <button id="28">
+          <container type="basic" container_id="182ea4e3fcb541ccaaee95df9e17c0f3" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="47" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="47" action_id="4a3de7819ca74c548a9d562163dad97b" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="3a68751e0b5d4f62a9ec7b050925c3d8"/>
+          </container>
+        </button>
+        <button id="29">
+          <container type="basic" container_id="aa3c04953f664aecb70263815847f270" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="48" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="48" action_id="1feeed180fe544f191a672fee7f2dca2" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="7e4a65246d254d4d9a2f2a244d64ca55"/>
+          </container>
+        </button>
+        <button id="3">
+          <container type="basic" container_id="a0044d0be67347b196cd142fb3b00d14" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="33" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="33" action_id="be7be3cee51140b69e46e51af0a0a470" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="2ed6122cabf542f099b3b80ea9911921"/>
+          </container>
+        </button>
+        <button id="4">
+          <container type="basic" container_id="cfe39c81d06b4fec8b38ed00dfb01a17" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="34" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="34" action_id="7269113a67c24834b31e50e2c9b2e904" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="4069d848b81344728db6d0d81efee71c"/>
+          </container>
+        </button>
+        <button id="5">
+          <container type="basic" container_id="c362828c62084300b45658604d41b85e" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="35" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="35" action_id="1db2fdb528c44b578f1a580c726f9851" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="2dd61eb63df1452e9da69f307e38334a"/>
+          </container>
+        </button>
+        <button id="6">
+          <container type="basic" container_id="db657539f9c14809a3f0055b440e2e39" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="41" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="41" action_id="9ac4475d207644efb105fcc831116158" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="47b4adb3ea134fccb1ab30519383d21c"/>
+          </container>
+        </button>
+        <button id="7">
+          <container type="basic" container_id="18bc89a138704641abc22cc57053ecc1" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="42" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="42" action_id="570ab5925c824cf7848a1bd72ee8bac5" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="f3d0169b819d4615a049ff9950c5b5ac"/>
+          </container>
+        </button>
+        <button id="8">
+          <container type="basic" container_id="74ffce0d691b404db6e68d5046e9ea69" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="43" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="43" action_id="c14ea0d7a0294950a707ad3d407483b4" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="02aa53bf84934e5e8035d364c7df0d09"/>
+          </container>
+        </button>
+        <button id="9">
+          <container type="basic" container_id="2479f1542c1d476594e507c20a5743db" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="44" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="44" action_id="d84d53782fbe4bc181d82bc97634fc77" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="34306f57b58a47f5938b91b30c7a4ace"/>
+          </container>
+        </button>
+        <hat id="1">
+          <container type="basic" container_id="d33529f14b5c43108b023956d338ac7c" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" hat="2" mode="VJoyHat" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="2" action_id="22ea7efa6ee843fb97c801f180c31793" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="ae0617bf577f44b09646035d7d94226a"/>
+          </container>
+        </hat>
+      </mode>
+    </device>
+    <device name=" VKBsim Gladiator NXT L  " label="" device-guid="6c422e005ce711ec8002444553540000" type="joystick">
+      <mode name="MM_NAV" inherit="MM_SCM">
+        <button id="3">
+          <container type="tempo" delay="0.50000000" autorelease-delay="0.25000000" activate-on="press" container_id="c1f366cfc79a481d9c1932a904d4a84c" collapsed="False">
+            <action-set>
+              <cycle-modes action_id="a05d4334319c4ed18e91244d14279570" priority="5">
+                <mode name="MM_NAV_Flight"/>
+                <mode name="MM_NAV_Quantum"/>
+              </cycle-modes>
+            </action-set>
+            <action-set>
+              <switch-mode name="MM_SCM" exec-on-press="True" exec-on-release="False" action_id="a5229ceba05146c79ef32e410d409399" priority="800"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="7b4a78d23edf4b0c8e888038de65209b"/>
+          </container>
+        </button>
+        <button id="5">
+          <container type="basic" container_id="0f5acf9e208440febc1eba4c7a67066f" collapsed="False">
+            <action-set>
+              <temporary-mode-switch name="Modifier" return-mode-enabled="False" return-mode="none" exec-on-press="True" exec-on-release="False" action_id="db40c4354da94ab485bec54ff806c6fa" priority="999"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="d5d9631566174ce3b99db1ffa9198e74"/>
+          </container>
+        </button>
+      </mode>
+      <mode name="MM_SCM">
+        <axis id="1" description="Strafe R/L">
+          <container type="basic" container_id="331bebbc21de4920ba2a947859feb636" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" axis="1" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="1" action_id="f12df224f4224f3a9a935f30663a9937" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="25f370bd276a47dab72aa0283615132c"/>
+          </container>
+        </axis>
+        <axis id="2" description="Strafe F/B">
+          <container type="basic" container_id="08ffc4a4121140ec843a64d09b664d0d" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" axis="2" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="2" action_id="0509f630a97642cdb04870d4df384b74" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="1cb89b8630234f9ca4de673984bb5ded"/>
+          </container>
+        </axis>
+        <axis id="3" description="Mining Throttle">
+          <container type="basic" container_id="882465110af6420495b50079eb7770e7" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" axis="3" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="3" action_id="39ceb8aae7fe42d28cc366fe0cd26ae4" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="c911d6b819ae478db36cacdb2bd799d1"/>
+          </container>
+        </axis>
+        <axis id="4" description="Move R/L">
+          <container type="basic" container_id="20d063aea292454ca10ee9c922e42343" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" axis="4" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="4" action_id="a45cfe165f4d427d833873750254e759" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="dcb5b7e2451e4267a793a45632c11a9f"/>
+          </container>
+        </axis>
+        <axis id="5" description="Move F/B">
+          <container type="basic" container_id="548bde66eba8415780dfa67dce5df5b0" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" axis="5" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="5" action_id="946d01d345fa438c91744da6e5341c0d" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="7d4e8952752b47f39ed0fff3aee1aef3"/>
+          </container>
+        </axis>
+        <axis id="6" description="Strafe U/D">
+          <container type="basic" container_id="ea652b4e39154f3eaf18adb36139bbd4" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" axis="6" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="6" action_id="b3e92e4f8f3e4648b75556af9a13c4b0" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="b649f83c0cca4ccaa128c4376575654b"/>
+          </container>
+        </axis>
+        <button id="1" description="Afterburn">
+          <container type="basic" container_id="6262c6f3bb444dd8af9e3021be6efa35" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="1" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="1" action_id="f7981fbf069c43cc8f6918026bb7196d" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="065a24bfc9d34579abde38fbe0a645b8"/>
+          </container>
+        </button>
+        <button id="10" description="Request Landing/Takeoff/Jumpgate">
+          <container type="basic" container_id="da9c73352f3d4522bd6b7208aa420774" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="15" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="15" action_id="04560ce2a58f4ff681a3fff9982737fa" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="e3f8f87b59fc43ff93a373c434829a08"/>
+          </container>
+        </button>
+        <button id="11" description="Camera 3rd Person/[M]Scanning Angle/">
+          <container type="basic" container_id="42321d8dfb40423aa922f8561103ada0" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="6" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="6" action_id="90caa8052cea4884a645ae3f2127b094" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="5fe8117275934ac3b6c10f9e5177cfcb"/>
+          </container>
+        </button>
+        <button id="12" description="Dynamic Zoom/[H]Missile Camera/[M]Toggle Docking Camera">
+          <container type="basic" container_id="6ff786c072c54d09924140168e01c62f" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="7" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="7" action_id="1e54b3ea52f5460ba43ac9d0eb038fc4" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="5b6908c245e24933a8960e5471ab5302"/>
+          </container>
+        </button>
+        <button id="125">
+          <container type="basic" container_id="659116df06bd41e0a6ddf1bc002acc56" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="125" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="125" action_id="1e4fd4978eb748d7a33186b0bd2f751e" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="6925264625e54db795b2b925c4c1cc64"/>
+          </container>
+        </button>
+        <button id="126">
+          <container type="basic" container_id="4967bc9fb4d544dfb674751d48f2ac67" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="126" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="126" action_id="d9291823c7ae4edda3cf0adda9b5860e" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="7cf21dea1cc24515873254a02d46ad46"/>
+          </container>
+        </button>
+        <button id="127">
+          <container type="basic" container_id="c2c939d969cb40289345f8becea550c3" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="127" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="127" action_id="090791b2049e4d2e92fc2aa94abd11c2" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="724d12cf30444edfb0197a6272ec7341"/>
+          </container>
+        </button>
+        <button id="128">
+          <container type="basic" container_id="ab511e2a489e419da48e1e181d4ab5a0" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="128" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="128" action_id="75cd3a8ba7234238b55fd8caa380024f" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="ba50dd2aec8341e0a54224559178930f"/>
+          </container>
+        </button>
+        <button id="13" description="[H] Look Behind">
+          <container type="basic" container_id="95cfc2573b1348d5b74e14342828d22c" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="8" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="8" action_id="60824c5fce164da49838296fc835afcf" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="134ed16b71b7453d891c72bceac615b7"/>
+          </container>
+        </button>
+        <button id="14" description="Head Tracking On/Off">
+          <container type="basic" container_id="6a57748f1fea4f5fb3c1a92f6e56ad59" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="9" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="9" action_id="97c09782bd6e4eb887396ee7a769ab52" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="9f4932d8669649b08914632602655e00"/>
+          </container>
+        </button>
+        <button id="15" description="[H]Reset Freelook">
+          <container type="tempo" delay="0.50000000" autorelease-delay="0.25000000" activate-on="release" container_id="8d8190b042b141d6a62d9d467fa8a832" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="10" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="10" action_id="ed2770d3aa1c4298a1aa33f3594dd2b0" priority="9"/>
+            </action-set>
+            <action-set>
+              <macro execute-on-press="True" execute-on-release="False" autorestart="False" autostop="False" action_id="80b6e35fa59c4fb78b0a6081d400ee7b" priority="5">
+                <properties/>
+                <actions>
+                  <key scan-code="62" extended="False" press="True"/>
+                  <vjoy vjoy-id="1" input-type="button" input-id="10" value="press"/>
+                  <pause duration="0.5" duration_max="0.0" is_random="False"/>
+                  <vjoy vjoy-id="1" input-type="button" input-id="10" value="release"/>
+                  <key scan-code="62" extended="False" press="False"/>
+                </actions>
+              </macro>
+            </action-set>
+            <activation-condition rule="all" condition_id="4efc1cbd181c47a983a34523fe5eb4af"/>
+          </container>
+        </button>
+        <button id="16" description="Stagger mode">
+          <container type="basic" container_id="3e382f0142424079a1f42ebea127b0ce" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="21" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="21" action_id="adf16b0fa13d4a5da3fc3c0c3beb9c63" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="ff5bf6795acd4b3fa564d9663c92e470"/>
+          </container>
+        </button>
+        <button id="17" description="ESP Toggle">
+          <container type="basic" container_id="5568aedb9fac448e91d7c8e7ec4f52e7" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="22" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="22" action_id="454edf1e65a8407ba4b3fb464f86937d" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="20c5dad7e2d446dd9ab22fbe1d884e51"/>
+          </container>
+        </button>
+        <button id="18" description="Turret Gyro/Stopwatch/[H]Stopwatch reset">
+          <container type="basic" container_id="9ac8985f66c640bcab60f31de6243d09" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="23" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="23" action_id="8588fcc6797547ce971ea1e420dc5d57" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="e0978ec906e04cd08a1333f727ed5d81"/>
+          </container>
+        </button>
+        <button id="19" description="Toggle Pip">
+          <container type="basic" container_id="5f764961722142948bb4e6d171c041f1" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="24" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="24" action_id="3674fa801ec148a0bbbf556e99ab3c3f" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="a5aab2aa084647c5be5940c7fa29c789"/>
+          </container>
+        </button>
+        <button id="2">
+          <container type="basic" container_id="81a2933782244bd9bb613099825c87e5" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="2" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="2" action_id="44bd301281ce41989f014f00e69ec5ec" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="6ddc48965f0a4241bafd86272c1c4dfa"/>
+          </container>
+        </button>
+        <button id="20" description="Gimble Cycle">
+          <container type="basic" container_id="d206a5cdb629444386fdf291565424c3" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="25" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="25" action_id="d3ea81aa46ba45ee9fb0bd7186e41950" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="bdbc86bea0a94238b155a021acc80d06"/>
+          </container>
+        </button>
+        <button id="21" description="Scan Ping">
+          <container type="basic" container_id="d5d30db44bcb41558e615eb95585795c" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="26" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="False" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="False" input="26" action_id="29fdc3225ff04999bb40b0c228f1ab09" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="2580cd57b2cf4beab3f4410ebef66700"/>
+          </container>
+        </button>
+        <button id="22" description="Spacebrake">
+          <container type="basic" container_id="909d857205f142e1931e79f0961f92af" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="27" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="27" action_id="10ebffd9f9a745d89d4204fd68553204" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="3b408f3e2b0a43b38e35c58a8df39db5"/>
+          </container>
+        </button>
+        <button id="23" description="Close Door">
+          <container type="basic" container_id="bf9527011b01492d883c65328233df44" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="28" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="28" action_id="f7bc8990be03485a961b5dc6753eb6ec" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="cb239fb5e77b4e899a0fbddafc678a7b"/>
+          </container>
+        </button>
+        <button id="24" description="Open Doors">
+          <container type="basic" container_id="2a0c176fa7804cee916c207e6a6f5b13" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="29" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="29" action_id="82736abe32054dc282ef4ba2d24ac72d" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="237c41241533434794748646088dcf0b"/>
+          </container>
+        </button>
+        <button id="25" description="Mining Laser PWR/Scanning Angle/Bomb Range/Tractor Distance">
+          <container type="basic" container_id="8a057a8a79724a35a7b14461cf1430f2" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="19" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="19" action_id="6d6e321d9d0e4e55836c51815d9416a7" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="545605d5a26c425bbcc8a872199e1b72"/>
+          </container>
+        </button>
+        <button id="26" description="Mining Laser PWR/Scanning Angle/Bomb Range/Tractor Distance">
+          <container type="basic" container_id="15dae8ef79b34e1b94ac720b072ad140" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="20" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="20" action_id="9e93e57049f94f3295c57690d040ba02" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="0248f7c1d38d41feb3f5b7d64d82a5d5"/>
+          </container>
+        </button>
+        <button id="27" description="Request Cargo">
+          <container type="basic" container_id="f848a3b1d46a4e3ba02966ff4e7481fe" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="16" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="16" action_id="3e8c208200354ed1b08181d59c7e941e" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="6afef1358df0470fb804673cff04509f"/>
+          </container>
+        </button>
+        <button id="28" description="VTOL Cycle">
+          <container type="basic" container_id="93c6aba693c04038b5bc0c03b0f3fc01" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="17" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="17" action_id="7c8f1e9992e7497a8168fa00ebe287ff" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="7044e36a62374314a336d6273cb95931"/>
+          </container>
+        </button>
+        <button id="29" description="Cycle Config">
+          <container type="basic" container_id="804692de6ee9428d9a8778b53535f6f8" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="18" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="18" action_id="f44e6e1526fc466cba75d6450b1091df" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="dd750050d81a423a889eb309ce606a2c"/>
+          </container>
+        </button>
+        <button id="3" description="Operator mode Cycle/[H]Master Mode Cycle">
+          <container type="tempo" delay="0.50000000" autorelease-delay="0.25000000" activate-on="press" container_id="f06a8cb34a824df18022d061a72144f3" collapsed="False">
+            <action-set>
+              <cycle-modes action_id="6ce1bad5636148ad87a96fff825fe3b0" priority="9">
+                <mode name="MM_SCM_Missiles"/>
+                <mode name="MM_SCM_Flight"/>
+                <mode name="MM_SCM_Guns"/>
+              </cycle-modes>
+            </action-set>
+            <action-set>
+              <switch-mode name="MM_NAV" exec-on-press="True" exec-on-release="False" action_id="2230d187f99142a39acd504be12265b1" priority="999"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="805524e0c3bf45538634344d472ca5da"/>
+          </container>
+        </button>
+        <button id="4" description="Precision Aiming/[H] Precision Max Zoom">
+          <container type="basic" container_id="1c1f2ce59ae4408791fd71243fcd7876" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="4" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="4" action_id="b956015072534b1c8d85fa8e02744489" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="dee9f7d5f2c64abc912a4a65a37efb22"/>
+          </container>
+        </button>
+        <button id="5" description="Modifier">
+          <container type="basic" container_id="964f9c7c5bff49e99e18398e41e37573" collapsed="False">
+            <action-set>
+              <temporary-mode-switch name="Modifier" return-mode-enabled="False" return-mode="none" exec-on-press="True" exec-on-release="False" action_id="b0b04d6af99542f6b445eb77cd86621f" priority="999"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="b47e6fd632164dbb974845250a2dc365"/>
+          </container>
+        </button>
+        <button id="6" description="Flight Ready">
+          <container type="basic" container_id="1af1264bd68b4fe6b2ad3dc0dec9a005" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="11" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="11" action_id="2d2a16525b524d9cb02f142526135788" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="a953b890ffd14ab6b969887efb2d1228"/>
+          </container>
+        </button>
+        <button id="7">
+          <container type="basic" container_id="cc7363027a124f8cabb42088fd48d6b8" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="12" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="12" action_id="7cd81490f226409ca2a8199eb152d5e4" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="9e51c41347374c97b1e66cf213aa0758"/>
+          </container>
+        </button>
+        <button id="8" description="Landing Gear/[H]Auto Land/Docking/[M] Thruster Power Toggle">
+          <container type="basic" container_id="0d37674213044785b4700f4c05654f08" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="13" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="13" action_id="18f1e53cfe514b21a83da20617c67e03" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="aefecd8a1bb14be48a0773e659317ec8"/>
+          </container>
+        </button>
+        <button id="9" description="Open Doors Toggle/[M] Weapons Power Toggle">
+          <container type="basic" container_id="61d69f7cdad44d0282879b76c79d9568" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="14" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="14" action_id="8b49df103b944812934238f8f0361d66" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="d5dbd051e22b482b8c5ae91b631f7941"/>
+          </container>
+        </button>
+        <hat id="1">
+          <container type="basic" container_id="de50a950bb704ea38426cbdaf608e7ed" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" hat="1" mode="VJoyHat" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="1" action_id="e6db49dde7444a7883c9f2879e1005df" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="741232b16fc5431cbded5b80f1169cba"/>
+          </container>
+        </hat>
+      </mode>
+      <mode name="Modifier" inherit="MM_SCM">
+        <button id="1">
+          <container type="basic" container_id="81d219ea686b4a86a8f9165c343e9a6e" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="31" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="31" action_id="3d62fd4692d140faa1320f1b5b96dbb5" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="f9cc3be462174a3e9039eb8d34c48716"/>
+          </container>
+        </button>
+        <button id="10">
+          <container type="basic" container_id="cf74146431f942cb9e905573874aa991" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="45" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="45" action_id="6a093fd8933343e0801fcf3f85f16eed" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="d17eacbf827549bca8d127089d8ca44a"/>
+          </container>
+        </button>
+        <button id="11">
+          <container type="basic" container_id="07e0ab1412884945915b6c507a3a29c7" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="36" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="36" action_id="aa56b3c4f2924f38aafa3026b0828ab4" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="d8677972aee04cbbacf0caee16d85035"/>
+          </container>
+        </button>
+        <button id="12">
+          <container type="basic" container_id="9472ea75463a4b05b9899b003741c8b3" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="37" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="37" action_id="b3bba46e59224865a8d276f726dee70f" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="19120bc51d974848ab3160cbca354061"/>
+          </container>
+        </button>
+        <button id="13" description="[M]Dec Tractor Distance/[M]Dec Bomb Range/[M]Dec Scanning Angle">
+          <container type="basic" container_id="34a14d0a40c748e2ab794de5e72931eb" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="38" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="38" action_id="846dd846fd474c109c0604f81389a7b8" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="772313b29f4f4bcbaf5ecc2c7b638b02"/>
+          </container>
+        </button>
+        <button id="14">
+          <container type="basic" container_id="4253dc1717a24ce2a578f895bf33c02c" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="39" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="39" action_id="b72fa55dad7d4d6f967c98c55d556312" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="63423244cb264d839749ae09f9aca67e"/>
+          </container>
+        </button>
+        <button id="15">
+          <container type="basic" container_id="728ee8d9500c46c082c50aded9856da0" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="40" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="40" action_id="efbc9245bb254cd5ba110a9328647bbf" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="e9708e6666f44586831ceed3f26a36c1"/>
+          </container>
+        </button>
+        <button id="16">
+          <container type="basic" container_id="07d4f7741ae24adeaf99d544082c0b4b" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="51" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="51" action_id="61e22f4288a44ffcae0496076b0f8bb3" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="47c0ee911eef48a6a7b9bd853320e48f"/>
+          </container>
+        </button>
+        <button id="17">
+          <container type="basic" container_id="168907bc92a64da5b3cfc48631daafda" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="52" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="52" action_id="b5e2902214914b8e90cbfb1200be50b8" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="a24bafc3848e46a28ad751ad3d94f9c1"/>
+          </container>
+        </button>
+        <button id="18">
+          <container type="basic" container_id="23948776e9694673a5a8c2052da51186" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="53" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="53" action_id="e0fd6442463b41068ef7fbe86b4a19a4" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="37b81044d65e4710b6eb3b0fc61f2d2b"/>
+          </container>
+        </button>
+        <button id="19">
+          <container type="basic" container_id="ac3339f51ff9479dafc6de1095426797" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="54" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="54" action_id="c75f6e1f8e5a4543a3207ca34af80163" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="b4aaca75ee2948fcb9858a816863b6ae"/>
+          </container>
+        </button>
+        <button id="2">
+          <container type="basic" container_id="bb902eacc4544d1e8a160fde45c78b13" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="32" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="32" action_id="68bffd50918345fc993617dc69f7abc5" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="4d141c347f924475a33ec19d56935b7c"/>
+          </container>
+        </button>
+        <button id="20">
+          <container type="basic" container_id="0224fad570c24c6abc74c34fa28143fb" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="55" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="55" action_id="fe08d552fa7547028ad2cebbae0bc1e9" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="7ec6481224554f4ab790db443049d141"/>
+          </container>
+        </button>
+        <button id="21">
+          <container type="basic" container_id="73cac49b121740b0a9af8237ecf3f454" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="56" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="56" action_id="f265f52f34e84a118d41e04581da5967" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="824b0befa3254e45ab7d969ff75e0d97"/>
+          </container>
+        </button>
+        <button id="22">
+          <container type="basic" container_id="1330e136b6e44654ab33a9e1ccde0ac7" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="57" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="57" action_id="12aa6afd82b548babb6eda455acc9407" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="f9b049fe0dd34433ae39f09eff6af0ce"/>
+          </container>
+        </button>
+        <button id="23">
+          <container type="basic" container_id="4ed280796f5945ef9a58242f73872da9" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="58" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="58" action_id="64e37e3141ba4c6e9ef3046ec8c528e4" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="dd761b0296da45bcb2b99496f137002c"/>
+          </container>
+        </button>
+        <button id="24">
+          <container type="basic" container_id="1a3a92ff8c944cd6a8ff95552fd1e9dc" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="59" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="59" action_id="6efd3cc0fc284e1a9b4df0f08f596c76" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="87fd834692b940838cf48b7ea12816d1"/>
+          </container>
+        </button>
+        <button id="25">
+          <container type="basic" container_id="8d7e8f9ceb044a97b93fd7a3517cb743" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="49" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="49" action_id="d237314ad34547d8a699d2dfef1d2fd1" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="a5d811951dbf439b996d261fe8c3b938"/>
+          </container>
+        </button>
+        <button id="26">
+          <container type="basic" container_id="35c5c3d29136494aa031fe8b80c3db15" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="50" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="50" action_id="072682bc45a24f11ad26b56feadf3bc0" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="6181d35f816340b6acdf434afe42daf0"/>
+          </container>
+        </button>
+        <button id="27">
+          <container type="basic" container_id="ccbdc31c5c824bb6830e23b65daa8726" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="46" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="46" action_id="bf8fe9052a754151a3cbb382bace5814" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="cda5e9f9a28d416db2acd03cf880df26"/>
+          </container>
+        </button>
+        <button id="28">
+          <container type="basic" container_id="fb53df52adcd4858bf302a494580d4eb" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="47" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="47" action_id="7bb5bdd77ad543b3ad9b9265dc1f025f" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="0a38f168519045fcbea19b00aad570a4"/>
+          </container>
+        </button>
+        <button id="29">
+          <container type="basic" container_id="85c69777e89245308b4876ebfea4c893" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="48" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="48" action_id="23c9e6814e05403b9119001ad3359e6d" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="3f442d9094074c52bd4b767270d8de0b"/>
+          </container>
+        </button>
+        <button id="3">
+          <container type="basic" container_id="15f4b5c3cbe24339900571358e606f89" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="33" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="33" action_id="9f518d027a594bad87dc87fd1cadc565" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="6389a7a52f2547a49dd5db2d6265c6c1"/>
+          </container>
+        </button>
+        <button id="4">
+          <container type="basic" container_id="17354f012fcf42528466fbe3e32394e2" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="34" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="34" action_id="92162e8448b840baa692296356e7e030" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="21ef6e6c8dfa4d85ba4587c55596f120"/>
+          </container>
+        </button>
+        <button id="5">
+          <container type="basic" container_id="df1e031ad23746e0b65bdf82a0374b6e" collapsed="False">
+            <action-set>
+              <previous-mode action_id="c2a371b595c3417393ef0ae907f942b2" priority="5"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="a28609aa2d694fcb91f7a073b4ceac85"/>
+          </container>
+        </button>
+        <button id="6" description="[M]Toggle Power On/Off">
+          <container type="basic" container_id="a3c8b2e266d848079f4200c4b5b6adb3" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="41" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="41" action_id="e2550e74b8954f7891f6ca7b52ada1f5" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="06b69e076f484256a1e6738d68ec24f8"/>
+          </container>
+        </button>
+        <button id="7" description="[M] Shields Power Toggle">
+          <container type="basic" container_id="d752d5ac88ae439f8fd31d06827ca1d1" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="42" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="42" action_id="f8bdaa91a9ae4d65a9074a4946f57e51" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="f6e3b1b83fec49aaae3c07afbfa07dcc"/>
+          </container>
+        </button>
+        <button id="8">
+          <container type="basic" container_id="3d24325b71ab4bd0b809ee84042c1307" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="43" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="43" action_id="e9dfb725d2ea432dbfd811d026c15c5a" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="8c3d2911f5c54bd8ac31021204790a98"/>
+          </container>
+        </button>
+        <button id="9">
+          <container type="basic" container_id="3b4d2769d1bd4d76800cc24d9d473b5d" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="44" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="44" action_id="65d55f541e7e4ea49f71253b61858fa5" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="be2c143832674e359b7abd6a692cc35f"/>
+          </container>
+        </button>
+        <hat id="1">
+          <container type="basic" container_id="ae95285853da405a90a6bcd0a6fc6958" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" hat="2" mode="VJoyHat" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="2" action_id="5f60169d6af34f41bdeb281f52273dee" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="fc224c1bb311425eb2efb85f5d080f5a"/>
+          </container>
+        </hat>
+      </mode>
+      <mode name="OM_Scan" inherit="MM_SCM">
+        <button id="5">
+          <container type="basic" container_id="9fa8eea5a2674989996ca47405941f59" collapsed="False">
+            <action-set>
+              <temporary-mode-switch name="Modifier" return-mode-enabled="False" return-mode="none" exec-on-press="True" exec-on-release="False" action_id="a50a97adf22541b2aace1dd9c0f39168" priority="999"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="ad94377ad07d4db3a959b68620737e5e"/>
+          </container>
+        </button>
+      </mode>
+    </device>
+    <device name="Mode Control" label="" device-guid="b3b159a04d064bd693f97583ec08b877" type="mode">
+      <mode name="MM_NAV" inherit="MM_SCM">
+        <modecontrol id="0" description="Mode Enter Actions">
+          <container type="basic" container_id="d60f949e23fa40c3a891b912fa62dd0e" collapsed="False">
+            <action-set>
+              <play-sound mode="audio" file="C:/Users/Sylvain/Joystick Gremlin Ex/Audio Files/Computer/Nav_Mode.wav" randomize="False" volume="100" tts_speed="1.00000000" exec_on_press="True" exec_on_release="False" loops="1" playback-ms="0" fadein-ms="0" fadeout-ms="0" stop-previous="False" audio-device="Speakers (4- Logitech PRO X Wireless Gaming Headset)" action_id="a178c6b3bc2a4b089a788a420d0a8d98" priority="5"/>
+              <vjoyremap vjoy="1" button="127" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="127" action_id="b83f2c1eb2e7445c856728985dc3a6cc" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="751af5d96079473894a3e3339abacf62"/>
+          </container>
+          <container type="basic" container_id="1f2f8b8110de4f2ca7abc3e1715d34e8" collapsed="False">
+            <action-set>
+              <map_to_state key="is_scm_mode" state-id="2931a4c3111c4908ab5911c1bf9d668c" mode="release" delay="250" exec_on_press="True" exec_on_release="False" sync-mode="3" default-reset="True" randomize-mode="False" randomize-weight="0.50000000" action_id="52563323236a4c75a523424d60147723" priority="5"/>
+              <map_to_state key="is_nav_mode" state-id="baeb92fdbad84c72b12ee9018ad62bd4" mode="toggle" delay="250" exec_on_press="True" exec_on_release="False" sync-mode="3" default-reset="True" randomize-mode="False" randomize-weight="0.45000000" action_id="8a46da99538c42349ad517a2f66afea4" priority="5"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="e96c73a4a455406caaee1ecdf03b293d"/>
+          </container>
+        </modecontrol>
+        <modecontrol id="1" description="Mode Exit Actions">
+          <container type="basic" container_id="6a4686816ea14b2db3d2c0bf4c23af94" collapsed="False">
+            <activation-condition rule="all" condition_id="96db40debdcb4cdaabe41875ee172240"/>
+          </container>
+        </modecontrol>
+      </mode>
+      <mode name="MM_NAV_Flight" inherit="MM_NAV">
+        <modecontrol id="0" description="Mode Enter Actions">
+          <container type="basic" container_id="32fc53d211034fcf9da489eca1498a63" collapsed="False">
+            <action-set>
+              <play-sound mode="audio" file="C:/Users/Sylvain/Joystick Gremlin Ex/Audio Files/Computer/Flight_Mode.wav" randomize="False" volume="100" tts_speed="1.00000000" exec_on_press="True" exec_on_release="False" loops="1" playback-ms="0" fadein-ms="0" fadeout-ms="0" stop-previous="False" audio-device="Speakers (4- Logitech PRO X Wireless Gaming Headset)" action_id="5271c3c45b3c4df885c4646e3ffaabde" priority="5"/>
+              <vjoyremap vjoy="1" button="121" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="121" action_id="61e1233feea4405a9bb8264bb3a16421" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="037d0eb7181a47a3bee6b5d27c0f1c3e"/>
+          </container>
+        </modecontrol>
+      </mode>
+      <mode name="MM_NAV_Quantum" inherit="MM_NAV">
+        <modecontrol id="0" description="Mode Enter Actions">
+          <container type="basic" container_id="eb3c48006e554f859170a7d78d45500d" collapsed="False">
+            <action-set>
+              <play-sound mode="audio" file="C:/Users/Sylvain/Joystick Gremlin Ex/Audio Files/Computer/Quantum_Mode.wav" randomize="False" volume="100" tts_speed="1.00000000" exec_on_press="True" exec_on_release="False" loops="1" playback-ms="0" fadein-ms="0" fadeout-ms="0" stop-previous="False" audio-device="Speakers (4- Logitech PRO X Wireless Gaming Headset)" action_id="2da077c392d540ba9ce6c7ea24ca43b9" priority="5"/>
+              <vjoyremap vjoy="1" button="120" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="120" action_id="814cdd6b50454d26b31fa59cc8699d4d" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="212d494d548446e18ed2c49743d0f90d"/>
+          </container>
+        </modecontrol>
+      </mode>
+      <mode name="MM_SCM">
+        <modecontrol id="0" description="Mode Enter Actions">
+          <container type="basic" container_id="e786b11c9cfd4d5ebf1017aad61b7cb5" collapsed="True">
+            <action-set>
+              <play-sound mode="audio" file="C:/Users/Sylvain/Joystick Gremlin Ex/Audio Files/Computer/SCM_Mode.wav" randomize="False" volume="100" tts_speed="1.00000000" exec_on_press="True" exec_on_release="False" loops="1" playback-ms="0" fadein-ms="0" fadeout-ms="0" stop-previous="False" audio-device="Speakers (4- Logitech PRO X Wireless Gaming Headset)" action_id="e9af6e7002014fc78880c81f73862155" priority="5"/>
+              <vjoyremap vjoy="1" button="128" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="128" action_id="c53fa2aef26c40e3b019a8cc7858de3d" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="d4455d7141fe49168391ad0e05a32a20"/>
+          </container>
+          <container type="basic" container_id="451fad06e09c480daf7507f8b5e5f951" collapsed="False">
+            <action-set>
+              <map_to_state key="is_scm_mode" state-id="2931a4c3111c4908ab5911c1bf9d668c" mode="toggle" delay="250" exec_on_press="True" exec_on_release="False" sync-mode="1" default-reset="True" randomize-mode="False" randomize-weight="0.50000000" action_id="3716178eb5124c76977c23e3f93d2693" priority="5"/>
+              <map_to_state key="is_nav_mode" state-id="baeb92fdbad84c72b12ee9018ad62bd4" mode="release" delay="250" exec_on_press="True" exec_on_release="False" sync-mode="3" default-reset="True" randomize-mode="False" randomize-weight="0.45000000" action_id="14f4a80a5d4e4581a29837c91503a1c0" priority="5"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="6545fc3b06b14fe982a7ce0b093df396"/>
+          </container>
+        </modecontrol>
+      </mode>
+      <mode name="MM_SCM_Flight" inherit="MM_SCM">
+        <modecontrol id="0" description="Mode Enter Actions">
+          <container type="basic" container_id="655538fdc3b64d76a7b55b4612e1b804" collapsed="False">
+            <action-set>
+              <play-sound mode="audio" file="C:/Users/Sylvain/Joystick Gremlin Ex/Audio Files/Computer/Flight_Mode.wav" randomize="False" volume="100" tts_speed="1.00000000" exec_on_press="True" exec_on_release="False" loops="1" playback-ms="0" fadein-ms="0" fadeout-ms="0" stop-previous="False" audio-device="Speakers (4- Logitech PRO X Wireless Gaming Headset)" action_id="4700228217cd4f9492c21e92300ddc04" priority="5"/>
+              <vjoyremap vjoy="1" button="121" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="121" action_id="3674b180423844a6abfbb1aa4801696b" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="aa6a6af1e05d431fab0757d54229062c"/>
+          </container>
+        </modecontrol>
+      </mode>
+      <mode name="MM_SCM_Guns" inherit="MM_SCM">
+        <modecontrol id="0" description="Mode Enter Actions">
+          <container type="basic" container_id="f2f85ea0987048fd80dff79caea2e35a" collapsed="False">
+            <action-set>
+              <play-sound mode="audio" file="C:/Users/Sylvain/Joystick Gremlin Ex/Audio Files/Computer/Gun_Mode.wav" randomize="False" volume="100" tts_speed="1.00000000" exec_on_press="True" exec_on_release="False" loops="1" playback-ms="0" fadein-ms="0" fadeout-ms="0" stop-previous="False" audio-device="Speakers (4- Logitech PRO X Wireless Gaming Headset)" action_id="3d5b13e670c04e76a91cd62f11d8da9a" priority="5"/>
+              <vjoyremap vjoy="1" button="122" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="122" action_id="802ab3aac0434ab7ab01e78d026d4393" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="04a812f5ca684f25a42ab9157b6c8426"/>
+          </container>
+        </modecontrol>
+      </mode>
+      <mode name="MM_SCM_Missiles" inherit="MM_SCM">
+        <modecontrol id="0" description="Mode Enter Actions">
+          <container type="basic" container_id="e6a5c0cd4eac43669f4a1cbe20fabc34" collapsed="False">
+            <action-set>
+              <play-sound mode="audio" file="C:/Users/Sylvain/Joystick Gremlin Ex/Audio Files/Computer/Missile_Mode.wav" randomize="False" volume="100" tts_speed="1.00000000" exec_on_press="True" exec_on_release="False" loops="1" playback-ms="0" fadein-ms="0" fadeout-ms="0" stop-previous="False" audio-device="Speakers (4- Logitech PRO X Wireless Gaming Headset)" action_id="329f575c3197439f928ced28b8db73d5" priority="5"/>
+              <vjoyremap vjoy="1" button="123" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="123" action_id="9611e3055d314ed0b54d79a549a6bd71" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="6f638e35aa7143319ac7480ba0ea4b4a"/>
+          </container>
+        </modecontrol>
+      </mode>
+      <mode name="OM_Aux" inherit="MM_SCM">
+        <modecontrol id="0" description="Mode Enter Actions">
+          <container type="basic" container_id="41a7a6f70e5d435190e7b9db5d064307" collapsed="False">
+            <action-set>
+              <play-sound mode="audio" file="C:/Users/Sylvain/Joystick Gremlin Ex/Audio Files/Computer/Aux_Mode.wav" randomize="False" volume="100" tts_speed="1.00000000" exec_on_press="True" exec_on_release="False" loops="1" playback-ms="0" fadein-ms="0" fadeout-ms="0" stop-previous="False" audio-device="Speakers (4- Logitech PRO X Wireless Gaming Headset)" action_id="9b837fee62824eb0979e87f686b0e91e" priority="5"/>
+              <vjoyremap vjoy="1" button="125" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="125" action_id="a20fb9d5c0b144dfac76cb4824849849" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="3ef87662015e469d91f03e8f8a377fe7"/>
+          </container>
+        </modecontrol>
+      </mode>
+      <mode name="OM_Gun">
+        <modecontrol id="0" description="Mode Enter Actions">
+          <container type="basic" container_id="0c4ad5ac76bc4ef48efde27332fb6bae" collapsed="False">
+            <action-set>
+              <play-sound mode="audio" file="C:/Users/Sylvain/Joystick Gremlin Ex/Audio Files/Computer/Gun_Mode.wav" randomize="False" volume="100" tts_speed="1.00000000" exec_on_press="True" exec_on_release="False" loops="1" playback-ms="0" fadein-ms="0" fadeout-ms="0" stop-previous="False" audio-device="Speakers (4- Logitech PRO X Wireless Gaming Headset)" action_id="58c5985ffc2346d1b553f3f550181e8d" priority="5"/>
+              <vjoyremap vjoy="1" button="122" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="122" action_id="380190c872a94072823bb663ba353c3c" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="c863c35acfcf4b3fa2518bf295462106"/>
+          </container>
+        </modecontrol>
+      </mode>
+      <mode name="OM_Missile">
+        <modecontrol id="0" description="Mode Enter Actions">
+          <container type="basic" container_id="dc935b2b7d464846b836bb18abbd28a7" collapsed="False">
+            <action-set>
+              <play-sound mode="audio" file="C:/Users/Sylvain/Joystick Gremlin Ex/Audio Files/Computer/Missile_Mode.wav" randomize="False" volume="100" tts_speed="1.00000000" exec_on_press="True" exec_on_release="False" loops="1" playback-ms="0" fadein-ms="0" fadeout-ms="0" stop-previous="False" audio-device="Speakers (4- Logitech PRO X Wireless Gaming Headset)" action_id="76b32b7d2103478eafde2dff3543ef91" priority="5"/>
+              <vjoyremap vjoy="1" button="121" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="121" action_id="4b58a6326f104b61b63824de23d62143" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="c6f6cff649d1452e8e832e34a0309290"/>
+          </container>
+        </modecontrol>
+      </mode>
+      <mode name="OM_Scan" inherit="MM_SCM">
+        <modecontrol id="0" description="Mode Enter Actions">
+          <container type="basic" container_id="d6fd92727aa845ddbee2e8c195e25ac9" collapsed="False">
+            <action-set>
+              <play-sound mode="audio" file="C:/Users/Sylvain/Joystick Gremlin Ex/Audio Files/Computer/Scanning_Mode.wav" randomize="False" volume="100" tts_speed="1.00000000" exec_on_press="True" exec_on_release="False" loops="1" playback-ms="0" fadein-ms="0" fadeout-ms="0" stop-previous="False" audio-device="Speakers (4- Logitech PRO X Wireless Gaming Headset)" action_id="94f8ca07d0fd44b98607b5d926164d78" priority="5"/>
+              <vjoyremap vjoy="1" button="124" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="124" action_id="f3c24aa6c5204883b817c1b26740872d" priority="9"/>
+            </action-set>
+            <activation-condition rule="all" condition_id="f62ca63f444f4e88b5f10ede44c6e1a9"/>
+          </container>
+        </modecontrol>
+      </mode>
+    </device>
+  </devices>
+  <settings>
+    <startup-mode>MM_SCM</startup-mode>
+    <default-delay>0.05000000</default-delay>
+    <input-filter>
+      <device id="171259e0ae7511ef8002444553540000" name="VJoy 8/128/1 (1)"/>
+      <device id="e7788980af2211ef8003444553540000" name="VJoy 8/127/1 (2)"/>
+      <device id="6c422e005ce711ec8002444553540000" name=" VKBsim Gladiator NXT L  "/>
+      <filter device="6c422e005ce711ec8002444553540000" type="axis" id="1" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="axis" id="2" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="axis" id="3" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="axis" id="4" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="axis" id="5" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="axis" id="6" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="1" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="2" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="3" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="4" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="5" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="6" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="7" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="8" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="9" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="10" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="11" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="12" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="13" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="14" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="15" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="16" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="17" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="18" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="19" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="20" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="21" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="22" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="23" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="24" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="25" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="26" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="27" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="28" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="29" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="120" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="121" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="122" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="123" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="124" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="125" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="126" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="127" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="button" id="128" filter="False"/>
+      <filter device="6c422e005ce711ec8002444553540000" type="hat" id="1" filter="False"/>
+      <device id="6c422e005ce711ec8001444553540000" name=" VKBsim Gladiator NXT R  "/>
+      <filter device="6c422e005ce711ec8001444553540000" type="axis" id="1" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="axis" id="2" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="axis" id="3" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="axis" id="4" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="axis" id="5" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="axis" id="6" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="1" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="2" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="3" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="4" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="5" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="6" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="7" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="8" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="9" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="10" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="11" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="12" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="13" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="14" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="15" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="16" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="17" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="18" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="19" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="20" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="21" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="22" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="23" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="24" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="25" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="26" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="27" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="28" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="button" id="29" filter="False"/>
+      <filter device="6c422e005ce711ec8001444553540000" type="hat" id="1" filter="False"/>
+    </input-filter>
+  </settings>
+  <plugins/>
+  <start>
+    <devices/>
+  </start>
+  <states>
+    <state id="baeb92fdbad84c72b12ee9018ad62bd4" key="is_nav_mode" value="False" type="bool" category_id="5e54b523700c4a5996bfea85ce1ea75e" is_expression="False" autorelease="False" autorelease-delay="1.00000000" autorelease-mode="toggle" autorelease-trigger="on"/>
+    <state id="2931a4c3111c4908ab5911c1bf9d668c" key="is_scm_mode" description="In SCM Mode?" value="True" type="bool" category_id="5e54b523700c4a5996bfea85ce1ea75e" is_expression="False" autorelease="False" autorelease-delay="1.00000000" autorelease-mode="toggle" autorelease-trigger="on"/>
+    <categories>
+      <category name="default" id="5e54b523700c4a5996bfea85ce1ea75e"/>
+    </categories>
+  </states>
+</profile>
