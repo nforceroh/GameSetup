@@ -106,6 +106,41 @@ Each VKB node should show a `user:sylvain:rw-` ACL entry (a trailing `+` in the
 > post-fix behaviour above is the documented effect of the rule, not something
 > observed here.
 
+### VKB USB suspend/resume issue (Fedora 45)
+
+If a VKB joystick prevents the system from waking correctly from sleep, this
+separate udev rule may help by disabling USB power persistence for VKB USB
+devices (`231d`):
+
+```bash
+sudo tee /etc/udev/rules.d/99-vkb-suspend-resume-fix.rules >/dev/null <<'EOF'
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="231d", ATTR{idProduct}=="0200|0201", ATTR{power/persist}="0"
+EOF
+sudo udevadm control --reload
+```
+
+Unplug and reconnect the joystick for the add rule to apply. This rule addresses
+USB suspend/resume behavior; it does **not** grant access to `/dev/hidraw*`.
+Keep `/etc/udev/rules.d/40-starcitizen-joystick-uaccess.rules` as well for
+Star Citizen and BindSight hidraw access. The two rules serve different
+purposes.
+
+Verify the setting for both sticks after reconnecting them:
+
+```bash
+cat /sys/bus/usb/devices/1-4.1.*/power/persist
+```
+
+Both values should be `0`:
+
+```text
+0
+0
+```
+
+The `1-4.1.*` path may differ on another USB topology; use the corresponding
+device paths under `/sys/bus/usb/devices/`.
+
 ### Joystick slot order comes from `Game.log`
 
 BindSight resolves which `js1`/`js2` slot the game assigns each stick from the
