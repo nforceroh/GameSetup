@@ -21,6 +21,38 @@ wot-launcher.sh --reset-mouse --profile 0  # switch the mouse back to desktop
 `install.sh` is safe to re-run: a file that already matches is left alone, and
 each copy is verified against the source with `cmp` after writing.
 
+## Installing World of Tanks
+
+The launcher does not install the game. Install Wargaming Game Center (WGC)
+and World of Tanks into the same UMU prefix that the launcher uses:
+
+1. Download the Wargaming Game Center installer from the
+   [official World of Tanks download page](https://worldoftanks.com/en/game/download/).
+2. Run the downloaded installer through UMU, using the launcher's prefix and
+   Proton runner:
+
+   ```bash
+   WINEPREFIX="$HOME/Games/WoT/prefix" \
+   GAMEID=umu-default \
+   PROTONPATH=GE-Proton \
+     umu-run "$HOME/Downloads/Wargaming_Game_Center_Install.exe"
+   ```
+
+   Replace the installer filename with the name of the file you downloaded.
+   `PROTONPATH=GE-Proton` tells UMU to download and use the latest GE-Proton.
+3. Finish installing WGC, then sign in and install the North America client.
+   Keep the game's install location at `C:\Games\World_of_Tanks_NA`; that is
+   where the launcher expects to find `WorldOfTanks.exe`.
+4. Once the game has finished downloading, launch it with:
+
+   ```bash
+   wot-launcher.sh
+   ```
+
+After WGC has been installed, `wot-launcher.sh --wcg` opens it for game
+updates, repairs, or other Game Center tasks. It cannot be used for the initial
+WGC installation.
+
 ## Files
 
 | Script | Purpose |
@@ -58,20 +90,17 @@ different prefix. `WOT_PREFERENCES` overrides the settings file path.
 
 ## Updating the Proton runner and DXVK
 
-The launcher currently pins `PROTONPATH` to the GE-Proton folder named in
-`wot-launcher.sh`. Installing a newer runner will not change that default.
-To have UMU download and use the latest GE-Proton build, set its `GE-Proton`
-codename:
+The launcher defaults to `PROTONPATH=GE-Proton`, which tells UMU to download
+and use the latest GE-Proton build. No manual `PROTONPATH` updates are needed
+when a new GE-Proton release comes out. To use a specific installed build
+instead, set `PROTONPATH` to its version name or full directory path:
 
 ```bash
-PROTONPATH=GE-Proton wot-launcher.sh
+PROTONPATH="$HOME/.steam/steam/compatibilitytools.d/GE-Proton11-12-x86_64" wot-launcher.sh
 ```
 
-This override applies to that launch only and does not require ProtonPlus or
-another launcher. To always use the latest GE-Proton, change the launcher's
-`PROTONPATH` default to `GE-Proton`. To pin a particular build instead, set
-`PROTONPATH` to its version name or full directory path. UMU also defaults to
-UMU-Proton and manages it automatically if `PROTONPATH` is unset.
+The override applies to that launch only. UMU also defaults to UMU-Proton and
+manages it automatically if `PROTONPATH` is unset.
 
 DXVK is supplied by the selected Proton runner, so selecting a newer
 GE-Proton/Proton runner updates DXVK along with the runner's other components.

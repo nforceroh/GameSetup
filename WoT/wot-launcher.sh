@@ -6,7 +6,7 @@ set -euo pipefail
 export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 
 export WINEPREFIX="${WOT_PREFIX:-$HOME/Games/WoT/prefix}"
-export PROTONPATH="${PROTONPATH:-$HOME/.local/share/Steam/compatibilitytools.d/GE-Proton11-11-x86_64}"
+export PROTONPATH="${PROTONPATH:-GE-Proton}"
 export GAMEID="${GAMEID:-umu-default}"
 export WINEFSYNC=1
 export WINE_CPU_TOPOLOGY=8:0,1,2,3,4,5,6,7
