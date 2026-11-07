@@ -14,8 +14,7 @@ export PULSE_LATENCY_MSEC=60
 export DRI_PRIME=1
 export LFX=1
 
-SCRIPT_DIR="$(cd "$(dirname "$(readlink -f "$0")")" && pwd)"
-# shellcheck source=WoT/g502-profile.sh
+SCRIPT_DIR="$HOME/.local/bin"
 source "$SCRIPT_DIR/g502-profile.sh"
 GAME_PROFILE=1
 
@@ -24,6 +23,7 @@ FIX_RES=0
 RESET_MOUSE_ONLY=0
 INSTALL_MOD=0
 INSTALL_MOD_PATH=""
+MODMGR_ONLY=0
 WCG_ONLY=0
 MOUSE_PROFILE_ARG=""
 RES_WIDTH=4008
@@ -33,6 +33,7 @@ RES_POSITION_Y=0
 GAME_ARGS=()
 GAME_EXE="$WINEPREFIX/drive_c/Games/World_of_Tanks_NA/win64/WorldOfTanks.exe"
 WGC_EXE="$WINEPREFIX/drive_c/Program Files/Wargaming.net/GameCenter/wgc.exe"
+MODMGR_EXE="$WINEPREFIX/drive_c/users/steamuser/AppData/Local/Programs/Aslain's WoT Mod Manager/Aslain.WoTModManager.exe"
 
 on_exit() {
     local exit_status=$?
@@ -142,9 +143,10 @@ Usage: $(basename "$0") [options] [game arguments]
   --height N        borderless window height with --fixres (default 2255)
   --reset-mouse     set the mouse profile and exit; defaults to the cached profile
   --profile N       profile to apply (0 desktop, 1 gaming; default 1 for the game)
-  --install-mod [PATH]
+  --mod [PATH]
                     run an Aslain's installer and exit; defaults to the newest
                     matching installer in ~/Downloads
+  --modmgr          run Aslain's WoT Mod Manager and exit
   --wcg             open Wargaming Game Center and exit
   -h, --help        show this help
 
@@ -157,8 +159,9 @@ while [ $# -gt 0 ]; do
         --fixres)      FIX_RES=1; shift ;;
         --no-fixres)   FIX_RES=0; shift ;;
         --reset-mouse) RESET_MOUSE_ONLY=1; shift ;;
+        --modmgr)      MODMGR_ONLY=1; shift ;;
         --wcg)         WCG_ONLY=1; shift ;;
-        --install-mod)
+        --mod)
             INSTALL_MOD=1
             shift
             if [ $# -ge 1 ] && [ "${1#-}" = "$1" ]; then
@@ -166,7 +169,7 @@ while [ $# -gt 0 ]; do
                 shift
             fi
             ;;
-        --install-mod=*) INSTALL_MOD=1; INSTALL_MOD_PATH="${1#*=}"; shift ;;
+        --mod=*) INSTALL_MOD=1; INSTALL_MOD_PATH="${1#*=}"; shift ;;
         --profile)
             [ $# -ge 2 ] || { usage >&2; echo "Error: --profile needs a value" >&2; exit 1; }
             MOUSE_PROFILE_ARG="$2"
@@ -215,6 +218,15 @@ if [ "$RESET_MOUSE_ONLY" -eq 1 ]; then
     exit $?
 fi
 
+if [ "$MODMGR_ONLY" -eq 1 ]; then
+    if [ ! -f "$MODMGR_EXE" ]; then
+        echo "Error: Aslain's WoT Mod Manager not found at: $MODMGR_EXE" >&2
+        exit 1
+    fi
+    umu-run "$MODMGR_EXE"
+    exit $?
+fi
+
 if [ "$INSTALL_MOD" -eq 1 ]; then
     if [ -n "$INSTALL_MOD_PATH" ]; then
         case "$INSTALL_MOD_PATH" in
@@ -247,7 +259,7 @@ if [ "$INSTALL_MOD" -eq 1 ]; then
         fi
         if [ -z "$host_path" ]; then
             echo "Error: no Aslains installer found in $HOME/Downloads." >&2
-            echo "Pass one explicitly: --install-mod /path/to/installer.exe" >&2
+            echo "Pass one explicitly: --mod /path/to/installer.exe" >&2
             exit 1
         fi
     fi

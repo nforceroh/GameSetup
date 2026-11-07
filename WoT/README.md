@@ -81,7 +81,8 @@ The launcher and mouse helper do not need `sudo`; `ratbagctl` works as your user
 | `--width N` / `--height N` | Override the size used by `--fixres` (default 4008x2255). |
 | `--reset-mouse` | Set the mouse profile and exit; re-applies the cached profile unless `--profile` is given. |
 | `--profile N` | Mouse profile, `0` (desktop) or `1` (gaming). Defaults to `1` for the game. |
-| `--install-mod [PATH]` | Run an Aslain's installer through umu and exit. Defaults to the newest installer in `~/Downloads`. |
+| `--mod [PATH]` | Run an Aslain's installer through umu and exit. Defaults to the newest installer in `~/Downloads`. |
+| `--modmgr` | Run Aslain's WoT Mod Manager installed in the WoT prefix and exit. |
 | `--wcg` | Run Wargaming Game Center through umu and exit. |
 | `[game arguments]` | Arguments after `--` are passed to World of Tanks. |
 
@@ -115,7 +116,7 @@ for runner versions.
 ## Updating the modpack
 
 ```bash
-wot-launcher.sh --install-mod
+wot-launcher.sh --mod
 ```
 
 Runs the newest Aslain's installer found in `~/Downloads` through umu, then
@@ -125,12 +126,19 @@ start the game afterwards — it is a separate operation.
 Point it elsewhere by passing a path, as either a host or a Windows path:
 
 ```bash
-wot-launcher.sh --install-mod                                   # newest in ~/Downloads
-wot-launcher.sh --install-mod ~/Downloads/SomeOtherInstaller.exe
-wot-launcher.sh --install-mod 'Z:\home\sylvain\Downloads\SomeOtherInstaller.exe'
+wot-launcher.sh --mod                                   # newest in ~/Downloads
+wot-launcher.sh --mod ~/Downloads/SomeOtherInstaller.exe
+wot-launcher.sh --mod 'Z:\home\sylvain\Downloads\SomeOtherInstaller.exe'
 ```
 
 Host paths and Windows `Z:`/`C:` paths are accepted.
+
+Launch Aslain's WoT Mod Manager, if installed in the default location in the
+WoT prefix, with:
+
+```bash
+wot-launcher.sh --modmgr
+```
 
 Open Wargaming Game Center in the UMU prefix with:
 
