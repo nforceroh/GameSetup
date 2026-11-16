@@ -7,7 +7,7 @@ set -euo pipefail
 
 SRC_DIR="$(cd "$(dirname "$0")" && pwd)"
 DEST_DIR="$HOME/.local/bin"
-SCRIPTS=(wot-launcher.sh g502-profile.sh)
+SCRIPTS=(wot-launcher.sh)
 
 mkdir -p "$DEST_DIR"
 
