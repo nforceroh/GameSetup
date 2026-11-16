@@ -187,6 +187,22 @@ Your existing `/etc/gamemode.ini` already does this correctly and needs no
 changes. The notes below explain why it works, and the one trap to be aware of
 if you ever edit it.
 
+### Known issue: libgamemodeauto.so.0 ELF class mismatch
+
+**Problem:** On 64-bit games, the bare soname `libgamemodeauto.so.0` resolves to
+both the 64-bit library (`/usr/lib64/`) and the 32-bit library (`/usr/lib/`).
+The 32-bit library fails to load with `"wrong ELF class: ELFCLASS32"`, which
+appears as a cosmetic loader warning on screen.
+
+**Fix:** The `gamemoderun` script at `/usr/bin/gamemoderun` was updated to use
+the full 64-bit path `/usr/lib64/libgamemodeauto.so.0` instead of the bare
+soname. This ensures only the 64-bit library is loaded, eliminating the ELF
+class mismatch error while GameMode still functions correctly (the 64-bit
+`libgamemode.so.0` is still dynamically loaded by the auto library).
+
+See the [GameMode issue](https://github.com/FeralInteractive/GameMode/issues/...)
+for more context.
+
 ### 1. Who requests gamemode, and what the known-games list really affects
 
 The UMU launcher requests gamemode with `gamemoderun`. The `start=` and `end=`

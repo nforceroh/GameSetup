@@ -1,6 +1,9 @@
 #!/bin/bash
-# Launch World of Tanks with umu-run, managing the G502 profile and optional
-# resolution, modpack, and Game Center operations.
+# Launch World of Tanks with umu-run, with optional resolution, modpack, and
+# Game Center operations.
+#
+# The mouse profile is not managed here: LinGHub owns the mouse and switches
+# profiles when it detects the game.
 set -euo pipefail
 
 export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
@@ -14,18 +17,12 @@ export PULSE_LATENCY_MSEC=60
 export DRI_PRIME=1
 export LFX=1
 
-SCRIPT_DIR="$HOME/.local/bin"
-source "$SCRIPT_DIR/g502-profile.sh"
-GAME_PROFILE=1
-
 PREFERENCES="${WOT_PREFERENCES:-$WINEPREFIX/drive_c/users/steamuser/AppData/Roaming/Wargaming.net/WorldOfTanks/preferences.xml}"
 FIX_RES=0
-RESET_MOUSE_ONLY=0
 INSTALL_MOD=0
 INSTALL_MOD_PATH=""
 MODMGR_ONLY=0
 WCG_ONLY=0
-MOUSE_PROFILE_ARG=""
 RES_WIDTH=4008
 RES_HEIGHT=2255
 RES_POSITION_X=0
@@ -34,13 +31,6 @@ GAME_ARGS=()
 GAME_EXE="$WINEPREFIX/drive_c/Games/World_of_Tanks_NA/win64/WorldOfTanks.exe"
 WGC_EXE="$WINEPREFIX/drive_c/Program Files/Wargaming.net/GameCenter/wgc.exe"
 MODMGR_EXE="$WINEPREFIX/drive_c/users/steamuser/AppData/Local/Programs/Aslain's WoT Mod Manager/Aslain.WoTModManager.exe"
-
-on_exit() {
-    local exit_status=$?
-    restore_desktop_profile
-    trap - EXIT
-    exit "$exit_status"
-}
 
 fix_resolution() {
     if [ ! -f "$PREFERENCES" ]; then
@@ -141,8 +131,6 @@ Usage: $(basename "$0") [options] [game arguments]
   --no-fixres       launch without touching preferences.xml (default)
   --width N         borderless window width with --fixres (default 4008)
   --height N        borderless window height with --fixres (default 2255)
-  --reset-mouse     set the mouse profile and exit; defaults to the cached profile
-  --profile N       profile to apply (0 desktop, 1 gaming; default 1 for the game)
   --mod [PATH]
                     run an Aslain's installer and exit; defaults to the newest
                     matching installer in ~/Downloads
@@ -158,7 +146,6 @@ while [ $# -gt 0 ]; do
     case "$1" in
         --fixres)      FIX_RES=1; shift ;;
         --no-fixres)   FIX_RES=0; shift ;;
-        --reset-mouse) RESET_MOUSE_ONLY=1; shift ;;
         --modmgr)      MODMGR_ONLY=1; shift ;;
         --wcg)         WCG_ONLY=1; shift ;;
         --mod)
@@ -170,11 +157,6 @@ while [ $# -gt 0 ]; do
             fi
             ;;
         --mod=*) INSTALL_MOD=1; INSTALL_MOD_PATH="${1#*=}"; shift ;;
-        --profile)
-            [ $# -ge 2 ] || { usage >&2; echo "Error: --profile needs a value" >&2; exit 1; }
-            MOUSE_PROFILE_ARG="$2"
-            shift 2
-            ;;
         --width)
             [ $# -ge 2 ] || { usage >&2; echo "Error: --width needs a value" >&2; exit 1; }
             RES_WIDTH="$2"
@@ -187,7 +169,6 @@ while [ $# -gt 0 ]; do
             ;;
         --width=*)    RES_WIDTH="${1#*=}"; shift ;;
         --height=*)   RES_HEIGHT="${1#*=}"; shift ;;
-        --profile=*)  MOUSE_PROFILE_ARG="${1#*=}"; shift ;;
         -h|--help)    usage; exit 0 ;;
         --)
             shift
@@ -201,22 +182,6 @@ while [ $# -gt 0 ]; do
     esac
 done
 
-if [ -n "$MOUSE_PROFILE_ARG" ]; then
-    case "$MOUSE_PROFILE_ARG" in
-        0|1) ;;
-        *) echo "Error: --profile must be 0 or 1 (got '$MOUSE_PROFILE_ARG')" >&2; exit 1 ;;
-    esac
-    if [ "$RESET_MOUSE_ONLY" -eq 1 ]; then
-        set_mouse_profile "$MOUSE_PROFILE_ARG"
-        exit $?
-    fi
-    GAME_PROFILE="$MOUSE_PROFILE_ARG"
-fi
-
-if [ "$RESET_MOUSE_ONLY" -eq 1 ]; then
-    set_mouse_profile "$(cached_mouse_profile)"
-    exit $?
-fi
 
 if [ "$MODMGR_ONLY" -eq 1 ]; then
     if [ ! -f "$MODMGR_EXE" ]; then
@@ -290,14 +255,6 @@ if [ ! -f "$GAME_EXE" ]; then
 fi
 
 cd "$(dirname "$GAME_EXE")"
-trap on_exit EXIT
-
-if ! set_mouse_profile "$GAME_PROFILE"; then
-    echo "Error: could not activate the World of Tanks mouse profile." >&2
-    exit 1
-fi
-PROFILE_ACTIVATED=1
-echo "World of Tanks mouse profile activated."
 
 if [ "$FIX_RES" -eq 1 ] && ! fix_resolution; then
     echo "Warning: could not set the borderless window size; continuing anyway." >&2
