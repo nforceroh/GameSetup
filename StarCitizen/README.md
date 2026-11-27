@@ -375,6 +375,31 @@ The script diverges from the lug-helper template by one block, which is
 
 ## Windows: VJoy + JoystickGremlinEx
 
+### Export Joystick Gremlin bindings to CSV
+
+The [`jg2csv.py`](jg2csv.py) script converts Joystick Gremlin or Joystick
+Gobloon XML profiles into tables with one column per profile mode:
+
+```bash
+python3 jg2csv.py "Joystick Gremlin Profile [ENH][NXT][4.10.0][LIVE][R15].xml"
+python3 jg2csv.py "Jgob4.10.xml"
+```
+
+By default, the CSV is written beside the profile with `_bindings.csv` appended
+to its filename. Use `-o` to choose another destination:
+
+```bash
+python3 jg2csv.py profile.xml -o bindings.csv
+```
+
+The CSV includes `Target VJoy Index` and `Target Button ID` columns. These list
+all unique VJoy targets and button IDs found for a physical control across the
+profile.
+
+Mode columns show only mode-specific bindings: `inherit` means the cell uses
+the same binding as its parent mode, and `unassigned` means no binding exists
+in that mode or its parent chain.
+
 The Windows install of Star Citizen drives the VKB sticks through
 [JoystickGremlinEx](https://github.com/muchimi/JoystickGremlinEx/) — a 64-bit
 fork of [Joystick Gremlin](https://github.com/JoystickGremlin/JoystickGremlin)

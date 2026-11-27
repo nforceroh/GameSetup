@@ -1,0 +1,61 @@
+﻿Status,Device,Device ID,Mode,Input Type,Input ID,Control Name,Recovered Binding,Target VJoy Index,Target Button ID,Root Action ID
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,1,Button 1,MAIN-TRIG-R.stage-1 [vJoy 2 button 31],2,31,ff2fbdb2-a81c-4a6b-b993-bf622a6929c2
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,2,Button 2,MAIN-TRIG-R.stage-2 [vJoy 2 button 32],2,32,9852503c-2fc0-4c1b-b1bc-f651eabb5ad2
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,3,R-A2,R-A2 [vJoy 2 button 33],2,33,c8f75c7c-f4f2-4ef7-960d-c316842cba90
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,4,R-B1,R-B1 [vJoy 2 button 34],2,34,d3a0b065-b8cd-42c8-8046-622230d11c86
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,5,R-D1,R-D1 [vJoy 2 button 35],2,35,0c8bf40b-347a-4ff7-b670-8a3e97ec1908
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,6,R-A3,R-A3.up [vJoy 2 button 41],2,41,a90c540b-5014-4017-b5c0-2d6f7bbc7f0e
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,7,R-A3,R-A3.right [vJoy 2 button 42],2,42,2fe371d1-2632-49a7-8e8b-c5be382afc39
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,8,R-A3,R-A3.down [vJoy 2 button 43],2,43,de6b45ae-cedc-4c85-91a6-deb2135f1319
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,9,R-A3,R-A3.left [vJoy 2 button 44],2,44,c4c6cef5-d9ca-4905-8c39-5baafc8702a3
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,10,R-A3,R-A3.press-in [vJoy 2 button 45],2,45,9505cf86-0f41-4bb9-a1e3-07161b3185df
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,11,R-A4,R-A4.up [vJoy 2 button 36],2,36,7c93f9cf-ef85-434e-8918-a328b5ada4b1
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,12,R-A4,R-A4.right [vJoy 2 button 37],2,37,5d450557-159a-4d7f-b339-e7fa53322e84
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,13,R-A4,R-A4.down [vJoy 2 button 38],2,38,f8488c06-a4d0-4c2f-abb9-f01058d2e87f
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,14,R-A4,R-A4.left [vJoy 2 button 39],2,39,d1e2228d-0bba-4d22-b02c-7d518233a2b1
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,15,R-A4,R-A4.press-in [vJoy 2 button 40],2,40,4ccbda3b-3b7d-4ed7-a85c-c310cea98750
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,16,R-C1,R-C1.up [vJoy 2 button 51],2,51,778c1e21-342d-4ded-ab9f-d242d70876c8
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,17,R-C1,R-C1.right [vJoy 2 button 52],2,52,3db38a9b-2c44-4650-8fb2-fe405769e0be
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,18,R-C1,R-C1.down [vJoy 2 button 53],2,53,5d7dae4c-777b-4df2-9d59-4967712e3dac
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,19,R-C1,R-C1.left [vJoy 2 button 54],2,54,120a7340-7bad-4955-bc67-3b994d988268
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,20,R-C1,R-C1.press-in [vJoy 2 button 55],2,55,53051c91-fc6e-4317-b079-487b2d8a62ae
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,21,Button 21,RAPID-TRIG-R.up [vJoy 2 button 56],2,56,0eb7e7e3-0c50-466b-9faa-01706d18f34b
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,22,Button 22,RAPID-TRIG-R.down [vJoy 2 button 57],2,57,63962bc6-5450-416d-b9bd-8d46a168eee1
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,23,R-EN1,R-EN1.up [vJoy 2 button 58],2,58,73ec8d0c-7498-49e2-b32a-a8a208d7b412
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,24,R-EN1,R-EN1.down [vJoy 2 button 59],2,59,5494a00d-044d-4e6d-afde-040acbda20f9
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,25,R-SW1,R-SW1.up [vJoy 2 button 49],2,49,2d90dcc7-46e4-4148-bad8-3d5d15e01390
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,26,R-SW1,R-SW1.down [vJoy 2 button 50],2,50,dc4f42a7-9819-49d2-b279-68af5d48a11d
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,27,R-F1,R-F1 [vJoy 2 button 46],2,46,50e65563-89f4-4dd6-bf31-676fffa7aefe
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,28,R-F2,R-F2 [vJoy 2 button 47],2,47,e7667e4b-7767-40be-a7a6-5f659077eef8
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,29,R-F3,R-F3 [vJoy 2 button 48],2,48,7b5e55f9-f664-40b2-8edf-27409f5d1509
+MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,hat,1,R-A1,R-A1 [vJoy 2 hat 2],2,,f8736226-5d14-428e-8db5-5f4fd641be15
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,1,Button 1,MAIN-TRIG-L.stage-1 [vJoy 1 button 31],1,31,099632c8-efd8-4312-bc1c-732531c20124
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,2,Button 2,MAIN-TRIG-L.stage-2 [vJoy 1 button 32],1,32,169fc4a2-187a-4f4b-a08f-bc58ad7088ad
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,3,L-A2,L-A2 [vJoy 1 button 33],1,33,e2f2253e-f9c6-406f-bd4f-e3d4d0d5eb7e
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,4,L-B1,L-B1 [vJoy 1 button 34],1,34,6765e00d-bff1-47bd-aadf-16944920a205
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,5,L-D1,"Temporary mode: SCM Mode | L-D1 ""Modifier | Modifier"" Release Modifier -- back to the prior mode (JG R15).",,,2208ffe5-fd4b-4e31-82a9-bc733943b876
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,6,L-A3,L-A3.up [vJoy 1 button 41],1,41,4ad68ef6-6c70-4b85-a0cb-7e0360b6db34
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,7,L-A3,L-A3.right [vJoy 1 button 42],1,42,7962fca4-4398-4952-b5d8-b96ad2899583
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,8,L-A3,L-A3.down [vJoy 1 button 43],1,43,7ce2a125-c33b-491a-984f-7ff889e5fd4b
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,9,L-A3,L-A3.left [vJoy 1 button 44],1,44,f32314c1-fa02-4c2e-9ae7-419d184cd693
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,10,L-A3,L-A3.press-in [vJoy 1 button 45],1,45,32ea2b00-4da7-4591-9095-d6eb3151fb4f
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,11,L-A4,L-A4.up [vJoy 1 button 36],1,36,3dca59bc-ce5e-4aac-9e1c-d67f012f494b
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,12,L-A4,L-A4.right [vJoy 1 button 37],1,37,0ea284fc-5ff8-407a-94de-5aa42ecfeab5
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,13,L-A4,L-A4.down [vJoy 1 button 38],1,38,2c3a8639-3de7-4df5-9f3a-5fcb331ab8f2
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,14,L-A4,L-A4.left [vJoy 1 button 39],1,39,95f95f30-05ef-40fc-accb-cafd5352db4a
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,15,L-A4,L-A4.press-in [vJoy 1 button 40],1,40,c3b101e9-f9fe-4cae-aed5-b188ac4f0a7a
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,16,L-C1,L-C1.up [vJoy 1 button 51],1,51,ef19b763-2417-455c-abed-37b1c2d52734
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,17,L-C1,L-C1.right [vJoy 1 button 52],1,52,4c101dee-b528-4557-9543-d61cf384da07
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,18,L-C1,L-C1.down [vJoy 1 button 53],1,53,4404b8f3-5a84-4abe-8f55-67e32d925496
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,19,L-C1,L-C1.left [vJoy 1 button 54],1,54,4ef637d3-7245-4622-a22b-3b2bd4ce2aa5
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,20,L-C1,L-C1.press-in [vJoy 1 button 55],1,55,98fd1556-6a3c-44bf-ab55-b502038daadc
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,21,Button 21,RAPID-TRIG-L.up [vJoy 1 button 56],1,56,523d542e-dd87-4ec3-a2e3-522dd72dfce4
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,22,Button 22,RAPID-TRIG-L.down [vJoy 1 button 57],1,57,404addc7-78e8-4097-beab-7be4bd5f9e96
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,23,L-EN1,L-EN1.up [vJoy 1 button 58],1,58,3160fc08-30be-4b09-9465-ce47f91c4ee6
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,24,L-EN1,L-EN1.down [vJoy 1 button 59],1,59,5f339ffe-6301-4dec-9eee-741ae474734d
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,25,L-SW1,L-SW1.up [vJoy 1 button 49],1,49,84c7805c-171b-46dc-8f74-89cf18e220fd
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,26,L-SW1,L-SW1.down [vJoy 1 button 50],1,50,81cb4c9f-65e9-46a9-a22c-69352c89b92e
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,27,L-F1,L-F1 [vJoy 1 button 46],1,46,9fe720ce-5d55-4141-86dd-1642b61f8a4d
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,28,L-F2,L-F2 [vJoy 1 button 47],1,47,9f829dfc-50cc-4973-bab9-5c4a98c7e69e
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,button,29,L-F3,L-F3 [vJoy 1 button 48],1,48,26dfeba0-e095-440a-956f-de0ed7e2256e
+MISSING,VKBsim Gladiator NXT L,0201231d-0003-0000-c79a-907c48f5c973,Modifier,hat,1,L-A1,L-A1 [vJoy 1 hat 2],1,,df3319b4-c17f-4f7c-8737-ed8f725eea54
