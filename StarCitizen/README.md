@@ -432,3 +432,36 @@ axis shaping.
   Windows machine for the compatibility profile's mode-enter sounds to play.
 - `<removed-devices>` lists five device GUIDs that are explicitly excluded from
   the profile.
+
+## Local binding chart
+
+`bindings/` contains an offline copy of the Subliminal.gg
+[VKB Gladiator NXT x2 binding chart](https://subliminal.gg/bindings/vkb-gladiator-dual/chart)
+with local overrides (`binding-local.js` / `binding-local.css` /
+`binding-local-data.js`) that add legend filtering, label modes
+(Player / CIG / Raw), a colorblind-safe palette, and PNG export.
+
+### Run it
+
+The chart is a static page, but it must be served over HTTP (not opened as a
+`file://` URL) because the Next.js hydration scripts and the geometry SVG are
+fetched relative to the page origin.
+
+```bash
+cd ~/gitdev/GameSetup/StarCitizen/bindings
+python3 -m http.server 4173 --bind 127.0.0.1
+```
+
+Then open <http://127.0.0.1:4173/binding.html> in a browser.
+
+### Local override files
+
+| File | Purpose |
+| --- | --- |
+| `binding-local.js` | Filtering, label modes, colorblind palette, PNG export, UI cleanup |
+| `binding-local-data.js` | Per-binding behavior data (buckets, categories, markers, label text per mode) |
+| `binding-live-buckets.js` | Category label lists captured from the live site, used for legend filtering |
+| `binding-local.css` | Style overrides (forced dark background, hidden help buttons) |
+
+When editing any of these, bump the `?v=` query string on the matching
+`<script>`/`<link>` tag in `binding.html` to bust the browser cache.
