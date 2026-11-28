@@ -2082,9 +2082,6 @@
                 <g id="Header">
                     <g transform="matrix(1,0,0,1,-28.29502,-7.44539)">
                         <g>
-                            <g transform="matrix(1,0,0,1,3312,225)">
-                                <path d="M0,-163L619,-163C625.627,-163 631,-157.627 631,-151L631,-12C631,-5.373 625.627,0 619,0L0,0C-6.627,0 -12,-5.373 -12,-12L-12,-151C-12,-157.627 -6.627,-163 0,-163" style="fill:rgb(255,143,48);fill-rule:nonzero;"/>
-                            </g>
                             <g transform="matrix(1,0,0,1,-60.941895,0)">
                                 <g transform="matrix(2.335513,0,0,2.335513,1915.0903,260.001077)">
                                     <use xlink:href="#_Image5" x="0" y="0" width="199px" height="120px"/>
@@ -2092,13 +2089,6 @@
                                 <g transform="matrix(0.403068,0,0,0.403068,1638.616419,255.630705)">
                                     <use xlink:href="#_Image6" x="0" y="0" width="588px" height="717px"/>
                                 </g>
-                            </g>
-                            <g id="label.misc.title" transform="matrix(1,0,0,1,-490.00514,-28.589003)">
-                                <text x="614px" y="236.431px" style="font-family:'Oswald-Regular', 'Oswald';font-size:128px;fill:white;">STAR CITIZEN</text>
-                                <text x="1270.768px" y="236.431px" style="font-family:'ShareTech-Regular', 'Share Tech';font-size:128px;fill:rgb(255,178,49);">|</text>
-                                <g transform="matrix(128,0,0,128,3406.064,236.431325)">
-                                </g>
-                                <text x="1341.168px" y="236.431px" style="font-family:'ShareTech-Regular', 'Share Tech';font-size:128px;fill:rgb(255,178,49);">DUAL VKB GLADIATOR NXT BINDING CHART</text>
                             </g>
                             <g id="Off-Chart:-SubClub-Callout" serif:id="Off-Chart: SubClub Callout">
                             </g>
@@ -2106,9 +2096,6 @@
                             </g>
                         </g>
                         <g>
-                            <g transform="matrix(1,0,0,1,3312,225)">
-                                <path d="M0,-163L619,-163C625.627,-163 631,-157.627 631,-151L631,-12C631,-5.373 625.627,0 619,0L0,0C-6.627,0 -12,-5.373 -12,-12L-12,-151C-12,-157.627 -6.627,-163 0,-163" style="fill:rgb(255,143,48);fill-rule:nonzero;"/>
-                            </g>
                             <g transform="matrix(1,0,0,1,-60.941895,0)">
                                 <g transform="matrix(2.335513,0,0,2.335513,1915.0903,260.001077)">
                                     <use xlink:href="#_Image5" x="0" y="0" width="199px" height="120px"/>
@@ -2116,13 +2103,6 @@
                                 <g transform="matrix(0.403068,0,0,0.403068,1638.616419,255.630705)">
                                     <use xlink:href="#_Image6" x="0" y="0" width="588px" height="717px"/>
                                 </g>
-                            </g>
-                            <g id="label.misc.title1" serif:id="label.misc.title" transform="matrix(1,0,0,1,-490.00514,-28.589003)">
-                                <text x="614px" y="236.431px" style="font-family:'Oswald-Regular', 'Oswald';font-size:128px;fill:white;">STAR CITIZEN</text>
-                                <text x="1270.768px" y="236.431px" style="font-family:'ShareTech-Regular', 'Share Tech';font-size:128px;fill:rgb(255,178,49);">|</text>
-                                <g transform="matrix(128,0,0,128,3406.064,236.431325)">
-                                </g>
-                                <text x="1341.168px" y="236.431px" style="font-family:'ShareTech-Regular', 'Share Tech';font-size:128px;fill:rgb(255,178,49);">DUAL VKB GLADIATOR NXT BINDING CHART</text>
                             </g>
                             <g id="Off-Chart:-SubClub-Callout1" serif:id="Off-Chart: SubClub Callout">
                             </g>
