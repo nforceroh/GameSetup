@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Export Joystick Gremlin or Joystick Gobloon XML profiles to CSV."""
+"""Export Joystick Gobloon or Joystick Gremlin XML profiles to CSV."""
 
 from __future__ import annotations
 
@@ -12,7 +12,15 @@ from pathlib import Path
 from typing import Iterable
 
 
-CONTROL_LABEL_RE = re.compile(r"\b([LR]-[A-Z]+\d+)\b")
+CONTROL_LABEL_RE = re.compile(
+    r"\b([LR]-[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*)\b"
+)
+MAIN_TRIGGER_LABEL_RE = re.compile(
+    r"\bMAIN-TRIG-([LR])\.stage-\d+\b"
+)
+RAPID_TRIGGER_LABEL_RE = re.compile(
+    r"\bRAPID-TRIG-([LR])(?:\.[A-Za-z0-9_.-]+)?\b"
+)
 TYPE_ORDER = {"axis": 0, "button": 1, "hat": 2}
 
 
@@ -278,14 +286,26 @@ def collect_descriptions(
 
 def control_name(control: dict[str, object]) -> str:
     candidates: list[str] = []
+    input_id = control["input_id"]
+    device = str(control["device"])
+    side = "R" if device.endswith(" R") else "L" if device.endswith(" L") else ""
+
     for mode_actions in control["mode_actions"].values():
         for text in mode_actions:
-            candidates.extend(CONTROL_LABEL_RE.findall(text))
+            candidates.extend(
+                f"{label}-{input_id}"
+                for label in CONTROL_LABEL_RE.findall(text)
+            )
+            for side in MAIN_TRIGGER_LABEL_RE.findall(text):
+                return f"{side}-MAIN_TRIG-{control['input_id']}"
+            for side in RAPID_TRIGGER_LABEL_RE.findall(text):
+                return f"{side}-RAPID_TRIG-{control['input_id']}"
     if candidates:
         return deduplicate(candidates)[0]
 
     input_type = str(control["input_type"]).capitalize()
-    return f"{input_type} {control['input_id']}"
+    prefix = f"{side}-" if side else ""
+    return f"{prefix}{input_type.upper()}-{input_id}"
 
 
 def detect_profile_format(root: ET.Element) -> str:
@@ -377,7 +397,7 @@ def export_profile(source: Path, output: Path) -> tuple[int, str]:
 
     fieldnames = [
         "Device",
-        "Control Name",
+        "Input Name",
         "Control Type",
         "Control ID",
         "Target VJoy Index",
@@ -393,7 +413,7 @@ def export_profile(source: Path, output: Path) -> tuple[int, str]:
         for control in ordered_controls:
             row = {
                 "Device": control["device"],
-                "Control Name": control_name(control),
+                "Input Name": control_name(control),
                 "Control Type": str(control["input_type"]).capitalize(),
                 "Control ID": control["input_id"],
             }
@@ -507,9 +527,9 @@ def default_output_path(source: Path) -> Path:
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Auto-detect and export Joystick Gremlin or Gobloon XML bindings."
+        description="Auto-detect and export Joystick Gobloon or Gremlin XML bindings."
     )
-    parser.add_argument("profile", type=Path, help="Joystick Gremlin or Gobloon XML profile")
+    parser.add_argument("profile", type=Path, help="Joystick Gobloon or Gremlin XML profile")
     parser.add_argument(
         "-o",
         "--output",

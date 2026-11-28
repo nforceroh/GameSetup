@@ -4,30 +4,24 @@ Two setups are documented here:
 
 - **Linux / Wine** — Star Citizen under the LUG runner in the prefix
   `$HOME/Games/star-citizen` (not part of this repo), installed with the
-  [LUG helper](https://github.com/starcitizen-lug/lug-helper), with joystick
-  mapping via [BindSight](https://github.com/w00zla/BindSight/) and VR through
-  [WiVRn](https://github.com/WiVRn/WiVRn) on a Pico 4 Enterprise.
-- **Windows** — a native install that drives the VKB sticks through
-  [VJoy](https://virtualjoystick.sourceforge.net/) +
-  [JoystickGremlinEx](https://github.com/muchimi/JoystickGremlinEx/).
+  [LUG helper](https://github.com/starcitizen-lug/lug-helper), joystick mapping
+  via [Joystick Gobloon](https://github.com/h0useRus/JoystickGobloon), and VR
+  through [WiVRn](https://github.com/WiVRn/WiVRn) on a Pico 4 Enterprise.
+- **Windows** — a native install using Joystick Gobloon for device hiding and
+  virtual joysticks.
 
-## Linux / Wine + BindSight
+## Linux / Wine + Joystick Gobloon
 
-The Wine prefix is `$HOME/Games/star-citizen` (not part of this repo). The game
-folders BindSight points at are
-`$HOME/Games/star-citizen/drive_c/Program Files/Roberts Space Industries/StarCitizen/{LIVE,PTU,HOTFIX,EPTU}`.
-
-Joystick mapping is done with
-[BindSight](https://github.com/w00zla/BindSight/) (v0.17.0), a Star Citizen
-input-binding visualizer/mapper. It ships as a `deb`/`rpm`/`AppImage` and
-installs the binary as `/usr/bin/bindsight`.
+The Wine prefix is `$HOME/Games/star-citizen` (not part of this repo).
+Joystick mapping is handled by the Linux AppImage build of Joystick Gobloon.
+The setup process and AppImage instructions are in
+[Joystick Gobloon](#joystick-gobloon).
 
 ### Joystick detection needs a udev rule for `/dev/hidraw*` (not `sudo`, not the `input` group)
 
-BindSight reads joysticks through **SDL2** (joystick + GameController APIs) and
-**hidapi**, which on Linux open the kernel device nodes `/dev/hidraw*` (HID raw)
-and `/dev/input/event*` (evdev). Wine uses the `hidraw` nodes as well, so the
-same permission problem affects the game itself.
+Wine opens joystick HID devices through the kernel `/dev/hidraw*` nodes.
+Adding the user to `input` does not grant access to HID devices whose vendor
+udev rules leave them as `root:root` with mode `0600`.
 
 On this machine (Fedora 44) the two kinds of node have **different**
 permissions:
@@ -36,20 +30,6 @@ permissions:
 |------|--------------|---------------------------------|
 | `/dev/input/event*` | `root:input` `0660` | yes |
 | `/dev/hidraw6`, `/dev/hidraw9` (the VKB sticks) | `root:root` `0600`, no ACL | **no** |
-
-The user is already in the `input` group (`id -nG` → `sylvain wheel input
-gamemode`), and no udev rule matches vendor `231d`, so the open on the `hidraw`
-nodes fails with `EACCES` (os error 13) and the sticks are invisible. Running
-`sudo bindsight` bypasses the check, which is why it "works" under `sudo` — but
-it is a permissions issue, not a BindSight bug. **Adding the user to `input`
-does not fix it.**
-
-The symptom in the BindSight log (run as the normal user) is:
-
-```text
-[WARN][bindsight_lib::wineorder::linux] Wine cannot open /dev/hidraw9 (231d:0201): Permission denied (os error 13) — the game will not see this device
-[WARN][bindsight_lib::wineorder::linux] Wine cannot open /dev/hidraw6 (231d:0200): Permission denied (os error 13) — the game will not see this device
-```
 
 `231d:0200` is the VKB Gladiator NXT R and `231d:0201` the VKB Gladiator NXT L.
 
@@ -98,8 +78,8 @@ getfacl /dev/hidraw6 /dev/hidraw9
 ```
 
 Each VKB node should show a `user:sylvain:rw-` ACL entry (a trailing `+` in the
-`ls -l` mode string). Then run `bindsight` **without** `sudo` — the
-`Permission denied` warnings should be gone and both sticks detected.
+`ls -l` mode string). Joystick Gobloon and Star Citizen should then be run
+without `sudo`.
 
 > The rule was **not** applied when this README was written: the rule file did
 > not exist and `hidraw6`/`hidraw9` were still `root:root` `0600`. The
@@ -122,7 +102,7 @@ sudo udevadm control --reload
 Unplug and reconnect the joystick for the add rule to apply. This rule addresses
 USB suspend/resume behavior; it does **not** grant access to `/dev/hidraw*`.
 Keep `/etc/udev/rules.d/40-starcitizen-joystick-uaccess.rules` as well for
-Star Citizen and BindSight hidraw access. The two rules serve different
+Star Citizen and Joystick Gobloon hidraw access. The two rules serve different
 purposes.
 
 Verify the setting for both sticks after reconnecting them:
@@ -141,23 +121,6 @@ Both values should be `0`:
 The `1-4.1.*` path may differ on another USB topology; use the corresponding
 device paths under `/sys/bus/usb/devices/`.
 
-### Joystick slot order comes from `Game.log`
-
-BindSight resolves which `js1`/`js2` slot the game assigns each stick from the
-game's own `Game.log` (it does not use a live enumeration for ordering). If the
-log has no joystick lines, BindSight logs:
-
-```text
-[WARN][bindsight_lib] Game.log joystick order: .../LIVE/Game.log: no joystick lines
-[ERROR][bindsight_lib] no joystick order: no usable game log (...); joystick input cannot be resolved
-```
-
-This happens when the game has not been launched with the sticks connected
-since the last log write. Launching Star Citizen with both sticks plugged in
-populates the log and the slot-ordering / device-order-fix feature works. This
-does **not** block device *detection* — that is purely the `hidraw` udev rule
-fix above.
-
 ## Linux / Wine: VR (WiVRn + Pico 4 Enterprise)
 
 Star Citizen has **experimental OpenXR VR under Wine**. The LUG wiki's guidance
@@ -165,7 +128,7 @@ is to use **Monado** for PCVR/wired headsets (Vive, Index) and **WiVRn** for
 standalone headsets
 ([Head-Tracking → VR](https://wiki.starcitizen-lug.org/Head-Tracking)).
 The Pico 4 Enterprise is a standalone Android headset, so it uses WiVRn, which
-streams the PC's OpenXR output to it over the network (or USB).
+streams the PC's OpenXR output to it over USB.
 
 This is working on this machine. `Game.log` of the `LIVE` install records the
 game picking up the headset through WiVRn:
@@ -212,9 +175,7 @@ generated prefix; the wiki requires a LUG Wine **11.1 or newer**.
 ### PC side: WiVRn server
 
 1. Install: `sudo dnf install wivrn wivrn-dashboard`.
-2. **Avahi** must be running so the headset can discover the PC:
-   `systemctl enable --now avahi-daemon` (already `active` and `enabled` here).
-3. Start the server with the **WiVRn Dashboard** (`wivrn-dashboard`), or as a
+2. Start the server with the **WiVRn Dashboard** (`wivrn-dashboard`), or as a
    user service:
 
    ```bash
@@ -224,7 +185,7 @@ generated prefix; the wiki requires a LUG Wine **11.1 or newer**.
    The unit (`/usr/lib/systemd/user/wivrn.service`) runs `/usr/bin/wivrn-server`.
    It is currently **disabled and inactive** here, so the server is started
    on demand (dashboard).
-4. While a headset is connected, `wivrn-server` points the OpenXR and OpenVR
+3. While a headset is connected, `wivrn-server` points the OpenXR and OpenVR
    configuration at WiVRn and reverts it once the connection ends and all
    running VR applications are closed — so a VR application can only start
    **after** the headset connection is established. A virtual speaker (and a
@@ -249,24 +210,6 @@ Server settings live in `~/.config/wivrn/config.json` (search order:
 OpenVR titles; Star Citizen itself uses OpenXR. Pairing data
 (`~/.config/wivrn/cookie`, `known_keys.json`) is a secret — do not commit it.
 
-#### Network and firewall
-
-WiVRn needs **UDP 5353** (Avahi/mDNS discovery) and **9757 UDP + TCP** (the
-stream). The active firewalld zone here is `FedoraWorkstation` (interface
-`eno1`) with services `dhcpv6-client samba-client ssh` and ports
-`1025-65535/udp` and `1025-65535/tcp` open:
-
-- `9757` is covered by that port range.
-- `5353/udp` is **not** (it is below `1025`, and the `mdns` service is not
-  enabled in the zone). If the headset does not find the PC over Wi-Fi, open it:
-
-  ```bash
-  sudo firewall-cmd --zone=FedoraWorkstation --add-service=mdns --permanent
-  sudo firewall-cmd --reload
-  ```
-
-  This is untested here (see *Gaps*); the USB route below avoids discovery.
-
 ### Headset side: Pico 4 Enterprise
 
 - The headset enumerates over USB as `2d40:00b7 Pico PICO 4 Enterprise`.
@@ -277,12 +220,7 @@ stream). The active firewalld zone here is `FedoraWorkstation` (interface
   the dashboard or manually via `adb` appears in an **unknown sources** section
   on the headset. The installed package here is `org.meumeu.wivrn.github` (the
   GitHub-release build).
-- **Wi-Fi**: start the WiVRn app on the headset. It opens on a server list; the
-  PC should be listed with a **connect** button. On first start it asks for the
-  optional permissions (microphone, hand tracking, eye tracking, …); the docs
-  recommend keeping the default settings.
-- **Wired (USB)**: with the server already running and the headset's Wi-Fi
-  switched off:
+- **USB connection**: with the server already running:
 
   ```bash
   adb reverse tcp:9757 tcp:9757
@@ -362,8 +300,6 @@ The script diverges from the lug-helper template by one block, which is
 - **Pico 4 Enterprise** is not listed separately in the WiVRn docs (only
   *Pico 4*). It works here per `Game.log`, but it is not an officially listed
   headset.
-- Whether the missing `5353/udp` / `mdns` rule actually breaks Wi-Fi discovery
-  on this machine was not tested; the `Game.log` session may have been over USB.
 - How the 2026-10-22 session was started (headset launcher, dashboard or
   PC-side) is not recorded; `Game.log` shows VR toggled on and off several
   times in that session, and session quality was not assessed.
@@ -373,12 +309,61 @@ The script diverges from the lug-helper template by one block, which is
   displays was not tested.
 - WiVRn client/server versions must stay matched after updates.
 
-## Windows: VJoy + JoystickGremlinEx
+## Joystick Gobloon
 
-### Export Joystick Gremlin bindings to CSV
+[Joystick Gobloon](https://github.com/h0useRus/JoystickGobloon) provides device
+hiding and virtual-device mapping on Linux and Windows. It imports Joystick
+Gremlin profiles and also has a profile wizard.
 
-The [`jg2csv.py`](jg2csv.py) script converts Joystick Gremlin or Joystick
-Gobloon XML profiles into tables with one column per profile mode:
+### Linux AppImage
+
+Download `JoystickGobloon-<version>-x86_64.AppImage` from the
+[Joystick Gobloon releases](https://github.com/h0useRus/JoystickGobloon/releases/latest).
+
+Create the applications directory, move the downloaded AppImage into it, make it
+executable, and add a stable symlink:
+
+```bash
+mkdir -p ~/Applications
+mv ~/Downloads/JoystickGobloon-*-x86_64.AppImage ~/Applications/
+chmod +x ~/Applications/JoystickGobloon-*-x86_64.AppImage
+ln -sfn ~/Applications/JoystickGobloon-*-x86_64.AppImage ~/Applications/JoystickGobloon
+```
+
+Run the stable symlink:
+
+```bash
+~/Applications/JoystickGobloon
+```
+
+On first use:
+
+1. Click **Install** on the System Gobloon banner.
+2. Enter the password once to install the system component.
+3. Import the existing Joystick Gremlin profile, or create a profile with the
+   Gobloon wizard.
+4. Use **Map controls** if the profile was made with a different device setup.
+5. Hide the physical sticks and press **Activate** so Star Citizen receives the
+   virtual devices instead of the physical sticks.
+
+On Linux, Gobloon creates uinput joysticks and Xbox-style gamepads. It does not
+use vJoy or HidHide; those apply only to the Windows setup.
+
+### Windows
+
+Download the Windows installer or portable package from the same releases page.
+The installer adds vJoy and HidHide when they are missing. Import a profile,
+map the controls, hide the physical sticks, and press **Activate**.
+
+The checked-in [`Jgob4.10.xml`](Jgob4.10.xml) profile is an existing Gobloon
+profile for this setup. The older
+[`sc46gexwithmm_op.82.xml`](sc46gexwithmm_op.82.xml) profile is retained as a
+JoystickGremlinEx compatibility reference.
+
+### Export profile bindings to CSV
+
+The [`jg2csv.py`](jg2csv.py) script converts Joystick Gobloon or imported
+Joystick Gremlin XML profiles into tables with one column per profile mode:
 
 ```bash
 python3 jg2csv.py "Joystick Gremlin Profile [ENH][NXT][4.10.0][LIVE][R15].xml"
@@ -393,24 +378,20 @@ python3 jg2csv.py profile.xml -o bindings.csv
 ```
 
 The CSV includes `Target VJoy Index` and `Target Button ID` columns. These list
-all unique VJoy targets and button IDs found for a physical control across the
-profile.
+all unique virtual-joystick targets and button IDs found for a physical control
+across the profile.
 
 Mode columns show only mode-specific bindings: `inherit` means the cell uses
 the same binding as its parent mode, and `unassigned` means no binding exists
 in that mode or its parent chain.
 
-The Windows install of Star Citizen drives the VKB sticks through
-[JoystickGremlinEx](https://github.com/muchimi/JoystickGremlinEx/) — a 64-bit
-fork of [Joystick Gremlin](https://github.com/JoystickGremlin/JoystickGremlin)
-— which remaps the physical sticks onto
-[VJoy](https://virtualjoystick.sourceforge.net/) virtual joysticks that the game
-reads. The mapping is stored in the profile file
-[`sc46gexwithmm_op.82.xml`](sc46gexwithmm_op.82.xml) in this folder.
+Joystick Gobloon is the active Linux and Windows mapping app. It maps the
+physical VKB sticks onto virtual devices that Star Citizen reads and hides the
+physical devices from the game.
 
-### Profile overview
+### Compatibility profile overview
 
-`sc46gexwithmm_op.82.xml` is a JoystickGremlinEx profile
+The older `sc46gexwithmm_op.82.xml` profile is a JoystickGremlinEx profile
 (`<profile version="16">`, `start_mode="MM_SCM"`, `default_mode="Default"`,
 `force_numlock="True"`). It maps the two physical VKB sticks onto two VJoy
 devices and switches behavior per flight mode.
@@ -445,11 +426,9 @@ axis shaping.
 
 ### Notes
 
+- Use Joystick Gobloon as the Linux and Windows joystick mapper.
 - The audio file paths are absolute Windows paths under
   `C:/Users/Sylvain/Joystick Gremlin Ex/Audio Files/`; they must exist on the
-  Windows machine for the mode-enter sounds to play.
+  Windows machine for the compatibility profile's mode-enter sounds to play.
 - `<removed-devices>` lists five device GUIDs that are explicitly excluded from
   the profile.
-- This profile is independent of BindSight: BindSight edits the game's own
-  `actionmaps.xml` bindings, while JoystickGremlinEx sits between the physical
-  sticks and the game via VJoy.

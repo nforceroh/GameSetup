@@ -1,4 +1,4 @@
-﻿Status,Device,Device ID,Mode,Input Type,Input ID,Control Name,Recovered Binding,Target VJoy Index,Target Button ID,Root Action ID
+Status,Device,Device ID,Mode,Input Type,Input ID,Input Name,Recovered Binding,Target VJoy Index,Target Button ID,Root Action ID
 MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,1,Button 1,MAIN-TRIG-R.stage-1 [vJoy 2 button 31],2,31,ff2fbdb2-a81c-4a6b-b993-bf622a6929c2
 MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,2,Button 2,MAIN-TRIG-R.stage-2 [vJoy 2 button 32],2,32,9852503c-2fc0-4c1b-b1bc-f651eabb5ad2
 MISSING,VKBsim Gladiator NXT R,0200231d-0003-0000-cd29-b7ca5282c0dc,Modifier,button,3,R-A2,R-A2 [vJoy 2 button 33],2,33,c8f75c7c-f4f2-4ef7-960d-c316842cba90

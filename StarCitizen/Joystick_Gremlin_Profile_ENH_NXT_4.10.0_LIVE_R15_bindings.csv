@@ -1,4 +1,4 @@
-﻿Device,Control Name,Control Type,Control ID,Target VJoy Index,Target Button ID,SCM Mode,Auxiliary Mode,Modifier,Nav Mode,Notes
+Device,Input Name,Control Type,Control ID,Target VJoy Index,Target Button ID,SCM Mode,Auxiliary Mode,Modifier,Nav Mode,Notes
 VKBsim Gladiator EVO OT L,Axis 1,Axis,1,1,,L-X-Axis [vJoy 1 axis 1],inherit,inherit,inherit,SCM Mode: A flat 1:1 response curve sits on this axis only so you can reverse its direction with Joystick Gremlin's Invert Curve button if your hardware reads it backwards. No other effect.
 VKBsim Gladiator EVO OT L,Axis 2,Axis,2,1,,L-Y-Axis [vJoy 1 axis 2],inherit,inherit,inherit,SCM Mode: A flat 1:1 response curve sits on this axis only so you can reverse its direction with Joystick Gremlin's Invert Curve button if your hardware reads it backwards. No other effect.
 VKBsim Gladiator EVO OT L,Axis 3,Axis,3,1,,L-Z-Axis [vJoy 1 axis 6],inherit,inherit,inherit,SCM Mode: A flat 1:1 response curve sits on this axis only so you can reverse its direction with Joystick Gremlin's Invert Curve button if your hardware reads it backwards. No other effect.
